@@ -1,0 +1,460 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"blo",
+				"block"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"bas",
+				"baseline"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"kontakt-",
+				"kontakt-info"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"tj",
+				"tjanstBtn"
+			],
+			[
+				"ful",
+				"full_checkbox"
+			],
+			[
+				"par",
+				"partnerLank"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"sam",
+				"samarbetspartners"
+			],
+			[
+				"Super",
+				"Super_Custom_Post_Type"
+			],
+			[
+				"margin",
+				"margin-left"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Con",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/mixins.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/768up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/481up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/main.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/page-blogg.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/js/scripts.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/style.less",
+		"/Users/daniel/Desktop/Pingisturnering/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/javascript/laborationer/lab3/myGUIFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/javascript/lektion8/menudemo.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/javascript/lektion8/menudemo.html",
+		"/Users/daniel/Skola/2012-2013/Javascript/Lektion-8-mar.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/daniel/wp-content/themes/danielv15/less/base.less",
+		"/Users/daniel/Skola/2012-2013/HTML och CSS/Pingisturnering/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/options-config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/page.php",
+		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1383214645/mapped/fitfreshandfemale.com/public_html/wp-config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/single-workshops.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/style.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/sftp-config.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/img/sektion_bg_1.jpg",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/css/style.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/img/banner-profilbild.png",
+		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/page-redigera-profil.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/sftp-config.json",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/single.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/comments.php",
+		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1382734253/mapped/fitfreshandfemale.com/public_html/wp-content/themes/asaklint-ptonline/comments.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/comments.php",
+		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1382734046/mapped/fitfreshandfemale.com/public_html/wp-content/themes/asaklint/comments.php",
+		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1382734029/mapped/fitfreshandfemale.com/public_html/wp-content/themes/asaklint-ptonline/single.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/page-nytt-inlagg.php",
+		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1382731653/mapped/fitfreshandfemale.com/public_html/wp-config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/grid.less",
+		"/Users/daniel/Arbete/SublimeTest projects/Åsa Klint.sublime-project",
+		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<div class=\"four\">4</div>",
+			"h0",
+			" class=\"3\"",
+			"1",
+			" class=\"1\"",
+			" class=\"2\"",
+			" class=\"4\"",
+			" class=\"5\"",
+			"5",
+			"4",
+			"5",
+			">\n",
+			"240",
+			"320",
+			"h1",
+			"0",
+			"string",
+			"asaklint-settings",
+			"asaklint",
+			"redux_demo",
+			"redux-framework-demo",
+			"object",
+			"options",
+			"asaklint-settings",
+			"Options",
+			"settings",
+			"redux-framework-demo",
+			"large-6",
+			"large",
+			"large-6",
+			"large",
+			"6",
+			"h1",
+			"Samarbetspartners",
+			"samarbetspartners",
+			"0",
+			"article",
+			"else",
+			"article",
+			"mail",
+			"user",
+			"admin_head",
+			"remove_menu_page",
+			"update",
+			"p",
+			"du",
+			"är",
+			"h3",
+			"p",
+			"p>",
+			"p",
+			"p>",
+			"<p>",
+			"ostmeddelande",
+			"p"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"mixin",
+				"asaklint/less/mixins.less"
+			],
+			[
+				"blog",
+				"asaklint/page-blogg.php"
+			],
+			[
+				"index",
+				"asaklint/index.php"
+			],
+			[
+				"functio",
+				"asaklint/functions.php"
+			],
+			[
+				"scrip",
+				"asaklint/js/scripts.js"
+			],
+			[
+				"header",
+				"asaklint/header.php"
+			],
+			[
+				"style.le",
+				"asaklint/less/style.less"
+			],
+			[
+				"76",
+				"asaklint/less/768up.less"
+			],
+			[
+				"481",
+				"asaklint/less/481up.less"
+			],
+			[
+				"main",
+				"asaklint/less/main.less"
+			],
+			[
+				"scri",
+				"asaklint/js/scripts.js"
+			],
+			[
+				"option",
+				"asaklint/options-config.php"
+			],
+			[
+				"page",
+				"asaklint/page.php"
+			],
+			[
+				"functions",
+				"asaklint-ptonline/functions.php"
+			],
+			[
+				"function",
+				"asaklint/functions.php"
+			],
+			[
+				"blogg",
+				"asaklint/page-blogg.php"
+			],
+			[
+				"rediger",
+				"asaklint-ptonline/page-redigera-profil.php"
+			],
+			[
+				"funcio",
+				"asaklint-ptonline/functions.php"
+			],
+			[
+				"single",
+				"asaklint-ptonline/single.php"
+			],
+			[
+				"func",
+				"asaklint/functions.php"
+			],
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/daniel/Arbete/SublimeTest projects/Åsa Klint.sublime-project"
+			],
+			[
+				"newhem",
+				"/Applications/XAMPP/xamppfiles/htdocs/newhem/wp-content/themes/newhem2/Newhem.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
