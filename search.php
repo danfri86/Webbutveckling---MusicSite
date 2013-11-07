@@ -10,7 +10,7 @@
 						<h1>Search Artist and/or Song!</h1>
 						<hr />
 						
-						<form action="search.php" method="post" name="frmsearch">
+						<form action="search.php" id="frmSearch" method="post" name="frmsearch">
 							<fieldset>
 								<legend>
 									Song and/or Artist

@@ -12,7 +12,7 @@
 						
 						<fieldset>
 						  <legend>Type username and password</legend>
-						   <form action="login.php" method="post" name="frmLogin" >
+						   <form action="login.php" method="post" id="frmLogin" name="frmLogin" >
 								<label>
 									Name
 									<br />

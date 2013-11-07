@@ -169,7 +169,30 @@ footer {
 	clear: both;
 }
 
-/* FORMULÄR */
+/* FORMULÄR
+*****************************/
+fieldset{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+fieldset legend{
+	padding: 0;
+	margin-bottom: 1em;
+}
+
+form#frmNewUpdateArtist,
+form#frmNewUpdateSong,
+form#frmSearch,
+form#frmLogin{
+	padding: 1.2em;
+	background: white;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 3em;
+}
+
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
