@@ -12,7 +12,6 @@
 					<div id="content">
 						
 						<h1>Admin Song</h1>
-						<hr />
 
 						<!-- Hårdkodad HTML5 för Admin Song -->
 						
@@ -83,9 +82,7 @@
 							<input type="button" name="btnEdit" value="Edit" />
 							<input type="submit" class="btnDelete" name="btnDelete" value="Delete" />
 						</form>
-						
-						<hr />
-						
+												
 						<form action="adminSong.php" method="post" name="frmSong">
 						
 							id: 23<br />

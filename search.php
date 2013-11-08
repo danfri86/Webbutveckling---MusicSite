@@ -8,7 +8,6 @@
 					<div id="content">
 						
 						<h1>Search Artist and/or Song!</h1>
-						<hr />
 						
 						<form action="search.php" id="frmSearch" method="post" name="frmsearch">
 							<fieldset>
@@ -65,9 +64,7 @@
 								</audio>
 								<br />
 							</p>
-							
-							<hr />
-							
+														
 							<!-- colors.ogg -->
 							<div data-comments="comments" data-id="23">
 								<p>
@@ -105,9 +102,7 @@
 								</audio>
 								<br />
 							</p>
-							
-							<hr />
-							
+														
 						</fieldset>
 						
 						<!-- Hårdkodad HTML5 för utsökning av artist -->

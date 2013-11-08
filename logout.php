@@ -5,7 +5,6 @@
 				<div id="content">
 					
 					<h1> You are no longer logged on!</h1>
-					<hr />
 
                 </div>
 

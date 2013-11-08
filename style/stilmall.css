@@ -182,6 +182,11 @@ fieldset legend{
 	margin-bottom: 1em;
 }
 
+form{
+	padding: 1.5em 0;
+	border-bottom: 1px solid #ccc;
+}
+
 form#frmNewUpdateArtist,
 form#frmNewUpdateSong,
 form#frmSearch,
@@ -191,6 +196,13 @@ form#frmLogin{
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	margin-bottom: 3em;
+}
+
+input,
+textarea{
+	padding: .5em 1em;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
 input[type="button"],
@@ -203,6 +215,13 @@ button{
 	border: none;
 	border-radius: 4px;
 	padding: .5em 1em;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+	margin-top: 1.5em;
 }
 
 input[type="button"],

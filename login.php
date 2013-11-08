@@ -6,7 +6,6 @@
 					<div id="content">
 					
 						<h1><?php echo($title); ?></h1>
-						<hr />
 						
 						<?php ?>
 						

@@ -12,7 +12,6 @@
 					<div id="content">
 						
 						<h1>Admin Artist</h1>
-						<hr />
 
 						<!-- Hårdkodad HTML5 för Admin Artist -->
 						
@@ -50,9 +49,7 @@
 							<input type="hidden" name="hidPictureFileName" value="acdc.jpg" />
 							<input type="hidden" name="hidArtist" value="AC/DC" />
 						</form>
-						
-						<hr />
-						
+												
 						<form action="adminArtist.php" method="post" name="frmArtist">
 							id: 77<br />
 							name: Laleh <br />

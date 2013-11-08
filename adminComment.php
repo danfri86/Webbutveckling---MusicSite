@@ -13,7 +13,6 @@
 						<div id="content">
 							
 							<h1>Admin Comment</h1>
-							<hr />
 
 							<!-- Hårdkodad HTML5 för Admin Comment -->
 		
@@ -28,9 +27,7 @@
 								<input type="submit" class="btnDelete" name="btnDelete" value="Delete" />
 
 							</form>
-							
-							<hr />
-						
+													
 							<form action="adminComment.php" method="post" name="frmComment">
 							
 								id: 57<br />

@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
 				"in",
 				"inline-block"
 			],
@@ -12,16 +28,8 @@
 				"display"
 			],
 			[
-				"wid",
-				"width"
-			],
-			[
 				"pos",
 				"position"
-			],
-			[
-				"pa",
-				"padding-bottom"
 			],
 			[
 				"font-s",
@@ -30,10 +38,6 @@
 			[
 				"font",
 				"font-family"
-			],
-			[
-				"mar",
-				"margin"
 			],
 			[
 				"blo",
@@ -164,6 +168,15 @@
 	},
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminArtist.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/style/stilmall.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/Laboration 1 ISGB24 HT13.pdf",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminSong.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminComment.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/logout.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/search.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/incl/header.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/header.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/index.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/mixins.less",
@@ -225,6 +238,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<hr />",
 			"<div class=\"four\">4</div>",
 			"h0",
 			" class=\"3\"",
@@ -348,6 +362,22 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"comme",
+				"adminComment.php"
+			],
+			[
+				"adminso",
+				"adminSong.php"
+			],
+			[
+				"css",
+				"style/stilmall.css"
+			],
+			[
+				"admin",
+				"adminArtist.php"
+			],
 			[
 				"mixin",
 				"asaklint/less/mixins.less"
