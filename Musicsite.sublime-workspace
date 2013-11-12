@@ -119,6 +119,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "incl/header.php",
+			"settings":
+			{
+				"buffer_size": 1166,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "incl/footer.php",
+			"settings":
+			{
+				"buffer_size": 474,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "style/stilmall.css",
+			"settings":
+			{
+				"buffer_size": 3461,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -168,6 +192,8 @@
 	},
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/daniel/wp-content/themes/danielv15/less/base.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/accordion/js/jquery-ui-1.10.3.custom.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminArtist.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/style/stilmall.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/Laboration 1 ISGB24 HT13.pdf",
@@ -192,7 +218,6 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/javascript/lektion8/menudemo.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/javascript/lektion8/menudemo.html",
 		"/Users/daniel/Skola/2012-2013/Javascript/Lektion-8-mar.html",
-		"/Applications/XAMPP/xamppfiles/htdocs/daniel/wp-content/themes/danielv15/less/base.less",
 		"/Users/daniel/Skola/2012-2013/HTML och CSS/Pingisturnering/index.html",
 		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/options-config.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/header.php",
@@ -312,8 +337,98 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "incl/header.php",
+					"settings":
+					{
+						"buffer_size": 1166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								587,
+								587
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "incl/footer.php",
+					"settings":
+					{
+						"buffer_size": 474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "style/stilmall.css",
+					"settings":
+					{
+						"buffer_size": 3461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								866,
+								866
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 319.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -323,7 +438,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{

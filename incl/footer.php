@@ -23,6 +23,12 @@
 
             </div><!-- end wrapper -->
 
+            <script type="text/javascript">
+            $(document).ready(function() {
+            	$(".accordion").accordion( { heightStyle: "content" } );
+            });
+            </script>
+
         </body>
 
     </html>
