@@ -121,5 +121,46 @@ function validateSongFormData(theForm) {
 	}
 }
 
+$(document).ready(function(){
+	//Klicka på reset i formuläret
+	$("form#frmNewUpdateSong .btnReset").on("click", function(){
+		resetSongFormData();
+	});
 
+	//Klicka på Delete
+	$(".accordion form").each(function(){
+		$(this).on("submit", function(theEvent){
+			theEvent.preventDefault();
+			theEvent.stopPropagation();
+
+			var id = $(this).find("input[name='hidId']").val();
+			var title = $(this).find("input[name='hidTitle']").val();
+
+			var tabort = verifyDeleteOfSong( id, title );
+
+			if(tabort){
+				alert("True");
+			}
+		});
+	});
+
+	//Klicka på Edit
+	$(".accordion form").each(function(){
+		formRef = $(this);
+
+		var id = $(formRef).find("input[name='hidId']").val();
+		var filnamn = $(formRef).find("input[name='hidSoundFileName']").val();
+		var artistId = $(formRef).find("input[name='hidArtistId']").val();
+		var title = $(formRef).find("input[name='hidTitle']").val();
+		var count = $(formRef).find("input[name='hidCount']").val();
+		
+
+		$(formRef).find("input[name='btnEdit']").on("click", function(theEvent){
+			theEvent.preventDefault();
+			theEvent.stopPropagation();
+
+			copySongFormData( id, filnamn , artistId, title, count );
+		});
+	});
+});
 

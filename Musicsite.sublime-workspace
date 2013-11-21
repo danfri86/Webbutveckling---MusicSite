@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ver",
+				"verifyDeleteOfArtist"
+			],
+			[
+				"comm",
+				"commentsRef"
+			],
+			[
 				"mar",
 				"margin-top"
 			],
@@ -119,40 +127,16 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "incl/header.php",
-			"settings":
-			{
-				"buffer_size": 1166,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "incl/footer.php",
-			"settings":
-			{
-				"buffer_size": 474,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "style/stilmall.css",
-			"settings":
-			{
-				"buffer_size": 3461,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 27.0,
+		"height": 327.0,
 		"selected_items":
 		[
 			[
-				"insta",
-				"Package Control: Install Package"
+				"inde",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"instal",
@@ -160,6 +144,14 @@
 			],
 			[
 				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"insta",
 				"Package Control: Install Package"
 			],
 			[
@@ -175,7 +167,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 575.0
+		"width": 401.0
 	},
 	"console":
 	{
@@ -192,17 +184,30 @@
 	},
 	"file_history":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/daniel/wp-content/themes/danielv15/less/base.less",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/accordion/js/jquery-ui-1.10.3.custom.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminArtist.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/style/stilmall.css",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/Laboration 1 ISGB24 HT13.pdf",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminSong.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/searchFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/incl/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/search.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/commentFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/artistFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/ajax/likesong.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminComment.php",
+		"/Users/daniel/Skola/Webbutveckling/Ajax/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/artistFunctions.php",
+		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminSong.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/Musicsite.sublime-workspace",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/incl/header.php",
+		"/Users/daniel/Skola/Webbutveckling/R1_ISGB24_HT13/R1_ISGB24_HT13.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/customScripts.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/songFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/accordion/js/jquery-ui-1.10.3.custom.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/style/stilmall.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/jquery/jquery-2.0.2.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/daniel/wp-content/themes/danielv15/less/base.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/Laboration 1 ISGB24 HT13.pdf",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/logout.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/login.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/search.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/incl/header.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/header.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/index.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/mixins.less",
@@ -263,6 +268,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"commentsRef",
+			"formRef",
 			"<hr />",
 			"<div class=\"four\">4</div>",
 			"h0",
@@ -337,98 +344,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "incl/header.php",
-					"settings":
-					{
-						"buffer_size": 1166,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								587,
-								587
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "incl/footer.php",
-					"settings":
-					{
-						"buffer_size": 474,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "style/stilmall.css",
-					"settings":
-					{
-						"buffer_size": 3461,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								866,
-								866
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 319.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -478,20 +395,52 @@
 		"selected_items":
 		[
 			[
-				"comme",
-				"adminComment.php"
+				"foot",
+				"incl/footer.php"
 			],
 			[
-				"adminso",
-				"adminSong.php"
+				"sear",
+				"search.php"
+			],
+			[
+				"header",
+				"incl/header.php"
+			],
+			[
+				"hea",
+				"incl/header.php"
+			],
+			[
+				"cusom",
+				"script/customScripts.js"
+			],
+			[
+				"admin",
+				"adminArtist.php"
+			],
+			[
+				"footer",
+				"incl/footer.php"
+			],
+			[
+				"head",
+				"incl/header.php"
+			],
+			[
+				"admi",
+				"adminArtist.php"
 			],
 			[
 				"css",
 				"style/stilmall.css"
 			],
 			[
-				"admin",
-				"adminArtist.php"
+				"comme",
+				"adminComment.php"
+			],
+			[
+				"adminso",
+				"adminSong.php"
 			],
 			[
 				"mixin",
@@ -512,10 +461,6 @@
 			[
 				"scrip",
 				"asaklint/js/scripts.js"
-			],
-			[
-				"header",
-				"asaklint/header.php"
 			],
 			[
 				"style.le",
@@ -599,7 +544,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_visible": false,
+	"side_bar_width": 216.0,
 	"status_bar_visible": true
 }

@@ -2,8 +2,8 @@
 	
 	$script="songFunctions.js";
 	$title="Admin song";
-	//$accordion = TRUE;
-	//$jquery = TRUE;
+	$accordion = TRUE;
+	$jquery = TRUE;
 	//$admin = "secretpage";
 	
 	include("incl/header.php");

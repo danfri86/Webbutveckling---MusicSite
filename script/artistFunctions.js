@@ -118,6 +118,46 @@ function validateArtistFormData() {
 	}
 }
 
+$(document).ready(function(){
+	//Klicka på reset i formuläret
+	$("form#frmNewUpdateArtist .btnReset").on("click", function(){
+		resetArtistFormData();
+	});
+
+	//Klicka på Delete
+	$(".accordion form").each(function(){
+		$(this).on("submit", function(theEvent){
+			theEvent.preventDefault();
+			theEvent.stopPropagation();
+
+			var id = $(this).find("input[name='hidId']").val();
+			var artist = $(this).find("input[name='hidArtist']").val();
+
+			var tabort = verifyDeleteOfArtist( id, artist );
+
+			if(tabort){
+				alert("True");
+			}
+		});
+	});
+
+	//Klicka på Edit
+	$(".accordion form").each(function(){
+		formRef = $(this);
+
+		var id = $(formRef).find("input[name='hidId']").val();
+		var artist = $(formRef).find("input[name='hidArtist']").val();
+		var filnamn = $(formRef).find("input[name='hidPictureFileName']").val();
+
+		$(formRef).find("input[name='btnEdit']").on("click", function(theEvent){
+			theEvent.preventDefault();
+			theEvent.stopPropagation();
+
+			copyArtistFormData( id, filnamn , artist );
+		});
+	});
+});
+
 
 
 

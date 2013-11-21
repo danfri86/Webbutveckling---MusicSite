@@ -3,7 +3,7 @@
 	$script="commentFunctions.js";
 	$title="Admin comment";
 	//$accordion = TRUE;
-	//$jquery = TRUE;
+	$jquery = TRUE;
 	//$admin = "secretpage";
 	
 	include("incl/header.php");
@@ -39,7 +39,7 @@
 			text: Bästa låten...<br />
 			insertdate: 2013-09-27 08:58:55<br />
 			<input type="hidden" name="hidId" value="57" />
-			<input type="hidden" name="hidText" value="B�sta l�ten..." />
+			<input type="hidden" name="hidText" value="Bästa låten..." />
 			<input type="submit" class="btnDelete" name="btnDelete" value="Delete" />
 
 		</form>
