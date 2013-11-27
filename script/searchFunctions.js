@@ -40,30 +40,61 @@ $(document).ready(function(){
 			formRef.slideToggle();
 		});
 	});
-});
 
-//AJAX
-var oXMLHTTP;
+	// Lägg till likes med AJAX
+	$("a[data-id]").each(function(){
+		var lank = $(this);
+		$(this).on("click", function(){
+			$.ajax({
+				timeout: 5000,
+				dataType: "json",
+				type: "post",
+				url: "ajax/likesong.php",
+				success: function(ajaxReturnData){
+					//alert(ajaxReturnData);
 
-function fetchCars() {
-	oXMLHTTP = new XMLHttpRequest();
-	oXMLHTTP.onreadystatechange = handleXMLHTTPData;
-	oXMLHTTP.open("POST", "ajax/likesong.php", true);
-	oXMLHTTP.send();
-}
-
-function handleXMLHTTPData() {
-
-	if(oXMLHTTP.readyState == 4) {
-		if(oXMLHTTP.status != 200) {
-			window.alert("Webbserver svarar med: " + oXMLHTTP.status);
-		} else {
-
-			$("div[data-id='22']").each(function(){
-				$(this).css("display", "none");
+					// Stoppa in data på sidan här, med hjälp av jQuery					
+					$("span[data-id="+lank.attr("data-id")+"]").text(ajaxReturnData.like);
+				},
+				error: function(xhr, status, error){
+					alert(xhr.satusText + " : " + status + " : " + error);
+				},
+				complete: function(xhr, status){}
 			});
-			var divRef = document.getElementById("theCars");
-			divRef.innerHTML = divRef.innerHTML + oXMLHTTP.responseText;
-		}
-	}
-}
+		});
+	});
+
+	// Lägg till kommentar med AJAX
+	$("form[name='frmcomment']").each(function(){
+		var form = $(this);
+		$(this).on("submit", function(theEvent){
+			theEvent.preventDefault();
+			theEvent.stopPropagation();
+
+			$.ajax({
+				timeout: 5000,
+				dataType: "json",
+				type: "post",
+				url: "ajax/savecomment.php",
+				beforeSend: function(x) {
+  if(x && x.overrideMimeType) {
+   x.overrideMimeType("application/j-son;charset=UTF-8");
+  }
+ },
+				success: function(ajaxReturnData){
+					alert(ajaxReturnData);
+
+					// Stoppa in data på sidan här, med hjälp av jQuery
+					var kommentar = "<p><b>"+ ajaxReturnData.date +":</b> ";
+					kommentar += "<i>"+ ajaxReturnData.comment +"</i></p>";
+
+					$("div[data-id="+form.attr("data-id")+"]").append(kommentar);
+				},
+				error: function(xhr, status, error){
+					alert(xhr.satusText + " : " + status + " : " + error);
+				},
+				complete: function(xhr, status){}
+			});
+		});
+	});
+});

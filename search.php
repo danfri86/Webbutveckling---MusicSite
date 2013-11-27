@@ -2,6 +2,7 @@
 	$script="searchFunctions.js";
 	$title="Search";
 	//$slimbox = TRUE;
+	//$accordion = True,
 	$jquery = TRUE;
 	include("incl/header.php");
 ?>
@@ -47,12 +48,13 @@
 				</legend>
 				<textarea name="txtComment" cols="40" rows="10" title='Comment' required="required" placeholder="Write your comment!"></textarea><br />
 				<input type="hidden" name="hidId" value="22" />
+				<input type="hidden" name="hidTextField" value="Det här är kommentarstexten från hidden field." />
 				<input type="submit" name="btnSave" value="Save" />
 				<input type="reset" class="btnReset" name="btnReset" value="Reset" />
 			</fieldset>
 		</form>
 		
-		<a href="#" data-id="22">Like wheels.ogg</a>
+		<a href="javascript:;" data-id="22">Like wheels.ogg</a>
 		<p>
 			Title: Wheels<br />
 			Song: wheels.ogg<br />
@@ -85,12 +87,13 @@
 				</legend>
 				<textarea name="txtComment" cols="40" rows="10" title='Comment' required="required" placeholder="Write your comment!"></textarea><br />
 				<input type="hidden" name="hidId" value="23" />
+				<input type="hidden" name="hidFileName" value="colors.ogg" />
 				<input type="submit" name="btnSave" value="Save" />
 				<input type="reset" class="btnReset" name="btnReset" value="Reset" />
 			</fieldset>
 		</form>
 					
-		<a href="#" data-id="23">Like Colors.ogg</a>
+		<a href="javascript:;" data-id="23">Like Colors.ogg</a>
 		<p>
 			Title: Colors<br />
 			Song: colors.ogg<br />

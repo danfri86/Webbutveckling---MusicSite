@@ -22,12 +22,14 @@
                 </footer>
 
             </div><!-- end wrapper -->
-
-            <script type="text/javascript">
-            $(document).ready(function() {
-            	$(".accordion").accordion( { heightStyle: "content" } );
-            });
-            </script>
+			
+			<?php if(isset($accordion)) { ?>
+	            <script type="text/javascript">
+	            $(document).ready(function() {
+	            	$(".accordion").accordion( { heightStyle: "content" } );
+	            });
+	            </script>
+	        <?php } ?>
 
         </body>
 

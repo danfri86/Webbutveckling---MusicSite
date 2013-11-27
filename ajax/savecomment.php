@@ -8,5 +8,4 @@
 	//{"date" : "dagens datum", "comment" : "Detta är en kommentar"}
 	$comment = "Detta är en kommentar";
 	echo("{\"date\" : \"" . date("Y-m-d") . "\", \"comment\" : \"". $comment ."\"}");
-	
 ?>
