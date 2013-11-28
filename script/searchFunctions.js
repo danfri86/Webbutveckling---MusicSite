@@ -76,14 +76,16 @@ $(document).ready(function(){
 				dataType: "json",
 				type: "post",
 				url: "ajax/savecomment.php",
-				beforeSend: function(x) {
-  if(x && x.overrideMimeType) {
-   x.overrideMimeType("application/j-son;charset=UTF-8");
-  }
- },
 				success: function(ajaxReturnData){
 					alert(ajaxReturnData);
 
+					/*
+					// XML
+					var kommentar = "<p><b>"+ $(ajaxReturnData).find("date").text() +":</b> ";
+					kommentar += "<i>"+ $(ajaxReturnData).find("comment").text() +"</i></p>";
+					*/
+
+					//JSON
 					// Stoppa in data på sidan här, med hjälp av jQuery
 					var kommentar = "<p><b>"+ ajaxReturnData.date +":</b> ";
 					kommentar += "<i>"+ ajaxReturnData.comment +"</i></p>";
