@@ -48,7 +48,6 @@
 				</legend>
 				<textarea name="txtComment" cols="40" rows="10" title='Comment' required="required" placeholder="Write your comment!"></textarea><br />
 				<input type="hidden" name="hidId" value="22" />
-				<input type="hidden" name="hidTextField" value="Det här är kommentarstexten från hidden field." />
 				<input type="submit" name="btnSave" value="Save" />
 				<input type="reset" class="btnReset" name="btnReset" value="Reset" />
 			</fieldset>
@@ -87,7 +86,6 @@
 				</legend>
 				<textarea name="txtComment" cols="40" rows="10" title='Comment' required="required" placeholder="Write your comment!"></textarea><br />
 				<input type="hidden" name="hidId" value="23" />
-				<input type="hidden" name="hidFileName" value="colors.ogg" />
 				<input type="submit" name="btnSave" value="Save" />
 				<input type="reset" class="btnReset" name="btnReset" value="Reset" />
 			</fieldset>

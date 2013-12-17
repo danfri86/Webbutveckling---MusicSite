@@ -6,68 +6,53 @@
 	$jquery = TRUE;
 	//$admin = "secretpage";
 	
-	include("incl/header.php");
-	
+	include("incl/header.php");	
 ?>
+
 <div id="content">
 	
 	<h1>Admin Artist</h1>
 
-	<!-- Hårdkodad HTML5 för Admin Artist -->
-	
-	 <fieldset>
-		<legend>New/Edit Artist</legend>
-		<form action="adminArtist.php" method="post" name="frmNewUpdateArtist" id="frmNewUpdateArtist" enctype="multipart/form-data">
-			<input type="hidden" id="hidId" name="hidId" />
-			<input type="hidden" id="hidPictureFileName" name="hidPictureFileName" />
-			<label>
-				Artist
-				<br />
-				<input type="text" id="txtArtist" name="txtArtist" title="Artist"/>
-			</label>
-			<br />
-			<label>
-				Picture
-				<br />
-				<input type="file" id="filePictureFileName" name="filePictureFileName" title="Picture" />
-			</label>
-			<br />
-			<input type="submit" class="btnSave" name="btnSave" value="Save" />
-			<input type="button" class="btnReset" name="btnReset" value="Reset" />
-		</form>
-	</fieldset>
+	<?php
+	include("src/databasefunctions.php");
+	include("src/artistfunctions.php");
 
-	<div class="accordion">
-		<h3>First header</h3>
-	
-		<form action="adminArtist.php" method="post" name="frmArtist">
-			id: 76<br />
-			name: AC/DC <br />
-			picture: acdc.jpg <br />
-			changedate: 2013-09-25 11:36:46 <br />
-			<img src="upload_jpg/acdc.jpg" alt="acdc.jpg" class="imgAnimation" /><br />
-			<input type="button" name="btnEdit" value="Edit" >
-			<input type="submit" class="btnDelete" name="btnDelete" value="Delete" />
-			<input type="hidden" name="hidId" value="76" />
-			<input type="hidden" name="hidPictureFileName" value="acdc.jpg" />
-			<input type="hidden" name="hidArtist" value="AC/DC" />
-		</form>
+	try{
+		$dbconnection = myDBConnect();
 
-		<h3>Second header</h3>
-								
-		<form action="adminArtist.php" method="post" name="frmArtist">
-			id: 77<br />
-			name: Laleh <br />
-			picture: laleh.jpg <br />
-			changedate: 2013-09-25 11:36:46 <br />
-			<img src="upload_jpg/laleh.jpg" alt="laleh.jpg." class="imgAnimation" /><br />
-			<input type="button" name="btnEdit" value="Edit" >
-			<input type="submit" class="btnDelete" name="btnDelete" value="Delete" />
-			<input type="hidden" name="hidId" value="77" />
-			<input type="hidden" name="hidPictureFileName" value="laleh.jpg" />
-			<input type="hidden" name="hidArtist" value="Laleh" />
-		</form>
-	</div>
+		// Insert, update, delete ska ske innan Select. Vi kontrollerar först insert, update och delete
+
+		// Om vi vill spara info om artist med "New/Edit Artist"
+		if( isset($_POST["btnSave"]) ){
+			// Finns inte hidId så sparas en ny artist
+			if( empty($_POST["hidId"]) ){
+				// INSERT
+				insertArtist( $dbconnection, $_POST["txtArtist"], $_FILES["filePictureFileName"]["name"] );
+			} else{ // Finns hidId så uppdateras en artist
+				// UPDATE
+				updateArtist( $dbconnection, $_POST["hidId"], $_POST["txtArtist"], $_FILES["filePictureFileName"]["name"], $_POST["hidPictureFileName"] );
+			}
+		}
+
+		// Om vi vill radera en artist. Använder endast det formulär så knappen finns i automatiskt
+		if( isset($_POST["btnDelete"]) ){
+			// DELETE
+		}
+
+		printArtistForm();
+
+		echo "<div class='accordion'>";
+			// Lista artister
+			listArtists($dbconnection);
+		echo "</div>";
+
+		// Stäng anslutningen till databasen
+		myDBClose($dbconnection);
+	}
+	catch( Exception $oE){
+		echo ( $oE->getMessage() );
+	}
+?>
 	
 </div>
 					

@@ -119,6 +119,14 @@ function validateArtistFormData() {
 }
 
 $(document).ready(function(){
+	//Klicka på save i formuläret
+	$("form#frmNewUpdateArtist").on("submit", function(theEvent){
+		theEvent.preventDefault();
+		theEvent.stopPropagation();
+		
+		validateArtistFormData();
+	});
+
 	//Klicka på reset i formuläret
 	$("form#frmNewUpdateArtist .btnReset").on("click", function(){
 		resetArtistFormData();

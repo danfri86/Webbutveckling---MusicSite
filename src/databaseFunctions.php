@@ -11,8 +11,8 @@
 	function myDBConnect() {
 	
 		define("DB_HOST", "localhost");
-		define("DB_USERNAME", "mysqluser");
-		define("DB_PASSWORD", "mysqlpassword");
+		define("DB_USERNAME", "root");
+		define("DB_PASSWORD", "");
 		define("DB", "dbmusic");
 	
 		$dbConnection = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB);
