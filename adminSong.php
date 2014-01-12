@@ -1,4 +1,10 @@
 <?php
+	include("src/loginFunctions.php");
+
+	if(!checkSession()){
+		header("location: login.php");
+		exit();
+	}
 	
 	$script="songFunctions.js";
 	$title="Admin song";
@@ -14,103 +20,53 @@
 	
 	<h1>Admin Song</h1>
 
-	<!-- Hårdkodad HTML5 för Admin Song -->
-	
-	<form action="adminSong.php" method="post" id="frmNewUpdateSong" name="frmNewUpdateSong" enctype="multipart/form-data">
-		
-		<fieldset>
-			<legend>New/Edit Song</legend>
-			<input type="hidden" id="hidId" name="hidId" />
-			<input type="hidden" id="hidSoundFileName" name="hidSoundFileName" />
-			<label>
-				Artist
-				<br />
-				<select id="selArtistId" name="selArtistId" title="Artist" autofocus="autofocus">
-				<option value="0">Choose Artist</option>
-				<option value="76">AC/DC</option>
-				<option value="77">Laleh</option>
-				</select>
-			</label>
-			<br />
-			
-			<label>
-				Song
-				<br />
-				<input type="text" id="txtTitle" name="txtTitle" title="Title"/>
-			</label>
-			<br />
-			
-			<label>
-				Sound
-				<br />
-				<input type="file" id="fileSoundFileName" name="fileSoundFileName" title="File" />
-			</label>
-			<br />
-			
-			<label>
-				Count
-				<br />
-				<input type="text" id="txtCount" name="txtCount" title="Count" />
-			</label>
-			<br />
-			
-			<input type="submit" id="btnSave" name="btnSave" value="Save" />
-			<input type="button" class="btnReset" name="btnReset" value="Reset" />
-		</fieldset>
-	</form>
+	<?php
+	include("src/databasefunctions.php");
+	include("src/songfunctions.php");
+	include("src/uploadFunctions.php");
 
-	<div class="accordion">
-		<h3>First header</h3>
-		<form action="adminSong.php" method="post" class="frmSong" name="frmSong">
-		
-			id: 22<br />
-			title: Wheels<br />
-			sound: Wheels.ogg<br />
-			count: 10<br />
-			changedate: 2013-09-27 08:58:09<br />
-			
-			<input type="hidden" name="hidId" value="22" />
-			<input type="hidden" name="hidArtistId" value="76" />
-			<input type="hidden" name="hidTitle" value="Wheels" />
-			<input type="hidden" name="hidSoundFileName" value="Wheels.ogg" />
-			<input type="hidden" name="hidCount" value="10" />
-			
-			<audio controls="controls">
-				<source src="upload_ogg/Wheels.ogg" />
-				Your browser does not support the audio tag!
-			</audio>
-			<br />
+	try{
+		$dbconnection = myDBConnect();
 
-			<input type="button" name="btnEdit" value="Edit" />
-			<input type="submit" class="btnDelete" name="btnDelete" value="Delete" />
-		</form>
+		// Insert, update, delete ska ske innan Select. Vi kontrollerar först insert, update och delete
 
-		<h3>Second header</h3>
-								
-		<form action="adminSong.php" method="post" class="frmSong" name="frmSong">
-		
-			id: 23<br />
-			title: Colors<br />
-			sound: colors.ogg<br />
-			count: 100<br />
-			changedate: 2013-09-27 08:58:09<br />
-			
-			<input type="hidden" name="hidId" value="23" />
-			<input type="hidden" name="hidArtistId" value="77" />
-			<input type="hidden" name="hidTitle" value="Colors" />
-			<input type="hidden" name="hidSoundFileName" value="colors.ogg" />
-			<input type="hidden" name="hidCount" value="100" />
-			
-			<audio controls="controls">
-				<source src="upload_ogg/colors.ogg" />
-				Your browser does not support the audio tag!
-			</audio>
-			<br />
+		// Om vi vill spara info om artist med "New/Edit Song"
+		if( isset($_POST["btnSave"]) ){
+			// Finns inte hidId så sparas en ny sång
+			if( empty($_POST["hidId"]) ){
+				validateAndMoveUploadedFile(strtolower(substr($_FILES["fileSoundFileName"]["name"], -3)));
+				// INSERT
+				insertSong( $dbconnection, $_POST["selArtistId"], $_POST["txtCount"], $_POST["txtTitle"], $_FILES["fileSoundFileName"]["name"] );
+			} else{ // Finns hidId så uppdateras en artist
+				if( $_FILES["fileSoundFileName"]["name"] == '' ){
 
-			<input type="button" name="btnEdit" value="Edit" />
-			<input type="submit" class="btnDelete" name="btnDelete" value="Delete" />
-		</form>
-	</div>
+				} else {
+					validateAndMoveUploadedFile(strtolower(substr($_FILES["fileSoundFileName"]["name"], -3)));
+				}
+				// UPDATE
+				updateSong( $dbconnection, $_POST["hidId"], $_POST["selArtistId"], $_POST["txtCount"], $_POST["txtTitle"], $_FILES["fileSoundFileName"]["name"], $_POST["hidSoundFileName"] );
+			}
+		}
+
+		// Om vi vill radera en sång. Använder endast det formulär så knappen finns i automatiskt
+		if( isset($_POST["btnDelete"]) ){
+			deleteSong( $dbconnection, $_POST["hidId"], $_POST["hidSoundFileName"] );
+		}
+
+		printSongForm($dbconnection);
+
+		echo "<div class='accordion'>";
+			// Lista artister
+			listSongs($dbconnection);
+		echo "</div>";
+
+		// Stäng anslutningen till databasen
+		myDBClose($dbconnection);
+	}
+	catch( Exception $oE){
+		echo ( $oE->getMessage() );
+	}
+	?>
 	
 </div>
 

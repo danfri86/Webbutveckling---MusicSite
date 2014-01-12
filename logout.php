@@ -1,4 +1,13 @@
 <?php
+	include("src/loginFunctions.php");
+
+	if( checkSession() ){
+		endSession();
+	} else{
+		header("location: login.php");
+		exit();
+	}
+
 	$title="Logout";
 	include("incl/header.php");
 ?>

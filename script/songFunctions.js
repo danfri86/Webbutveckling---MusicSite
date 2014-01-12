@@ -97,7 +97,6 @@ function validateSongFormData(theForm) {
 					throw new Error('Only ogg files are valid!');
 				}
             }
-			
 		}
 	
 		if(theForm.hidId.value !== "") {
@@ -122,6 +121,16 @@ function validateSongFormData(theForm) {
 }
 
 $(document).ready(function(){
+	//Klicka på save i formuläret
+	$("form#frmNewUpdateSong").on("submit", function(theEvent){
+		validateSongFormData();
+
+		if( validateSongFormData() == false ){
+			theEvent.preventDefault();
+			theEvent.stopPropagation();
+		}
+	});
+
 	//Klicka på reset i formuläret
 	$("form#frmNewUpdateSong .btnReset").on("click", function(){
 		resetSongFormData();
@@ -130,16 +139,13 @@ $(document).ready(function(){
 	//Klicka på Delete
 	$(".accordion form").each(function(){
 		$(this).on("submit", function(theEvent){
-			theEvent.preventDefault();
-			theEvent.stopPropagation();
-
 			var id = $(this).find("input[name='hidId']").val();
 			var title = $(this).find("input[name='hidTitle']").val();
 
-			var tabort = verifyDeleteOfSong( id, title );
 
-			if(tabort){
-				alert("True");
+			if( verifyDeleteOfSong(id, title) == false ){
+				theEvent.preventDefault();
+				theEvent.stopPropagation();
 			}
 		});
 	});

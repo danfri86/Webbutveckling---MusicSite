@@ -31,11 +31,11 @@
 		
 		if(strtoupper(substr(PHP_OS, 0, 3)) == "WIN") {
 			//WAMP
-			define("PATH", $_SERVER["DOCUMENT_ROOT"]."ISGB24/upload_".$inFileExtension."/");
+			define("PATH", $_SERVER["DOCUMENT_ROOT"]."musicsite/upload_".$inFileExtension."/");
 		}
-		else {	
+		else {
 			//XAMP
-			define("PATH", $_SERVER["DOCUMENT_ROOT"]."/ISGB24/upload_".$inFileExtension."/");
+			define("PATH", $_SERVER["DOCUMENT_ROOT"]."/musicsite/upload_".$inFileExtension."/");
 		}
 	
 		if(empty($_FILES) && empty($_POST) && isset($_SERVER["REQUEST_METHOD"]) && ($_SERVER["REQUEST_METHOD"] == "POST")) {

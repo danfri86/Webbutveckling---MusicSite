@@ -2,7 +2,8 @@
 	"folders":
 	[
 		{
-			"path": "/Applications/XAMPP/xamppfiles/htdocs/musicsite"
+			"follow_symlinks": true,
+			"path": "."
 		}
 	]
 }

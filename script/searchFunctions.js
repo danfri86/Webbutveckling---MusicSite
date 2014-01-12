@@ -57,7 +57,7 @@ $(document).ready(function(){
 					$("span[data-id="+lank.attr("data-id")+"]").text(ajaxReturnData.like);
 				},
 				error: function(xhr, status, error){
-					alert(xhr.satusText + " : " + status + " : " + error);
+					alert(xhr.responseText + " : " + status + " : " + error);
 				},
 				complete: function(xhr, status){}
 			});
@@ -79,11 +79,9 @@ $(document).ready(function(){
 				success: function(ajaxReturnData){
 					alert(ajaxReturnData);
 
-					/*
-					// XML
-					var kommentar = "<p><b>"+ $(ajaxReturnData).find("date").text() +":</b> ";
-					kommentar += "<i>"+ $(ajaxReturnData).find("comment").text() +"</i></p>";
-					*/
+					//Skicka med låt-id och text som är kommentaren här, direkt efter url?
+					var id = $("input").val($(form.attr("data-id")));
+					var text = $(form+" textarea[name=txtComment]");
 
 					//JSON
 					// Stoppa in data på sidan här, med hjälp av jQuery
@@ -93,7 +91,7 @@ $(document).ready(function(){
 					$("div[data-id="+form.attr("data-id")+"]").append(kommentar);
 				},
 				error: function(xhr, status, error){
-					alert(xhr.satusText + " : " + status + " : " + error);
+					alert(xhr.responseText + " : " + status + " : " + error);
 				},
 				complete: function(xhr, status){}
 			});

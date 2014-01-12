@@ -1,4 +1,10 @@
 <?php
+	include("src/loginFunctions.php");
+
+	if(!checkSession()){
+		header("location: login.php");
+		exit();
+	}
 	
 	$script="commentFunctions.js";
 	$title="Admin comment";
@@ -13,38 +19,30 @@
 		
 	<h1>Admin Comment</h1>
 
-	<!-- Hårdkodad HTML5 för Admin Comment -->
+	<?php
+	include("src/databasefunctions.php");
+	include("src/commentFunctions.php");
 
-	<div class="accordion">
-		<h3>First header</h3>
+	try{
+		$dbconnection = myDBConnect();
 
-		<form action="adminComment.php" method="post" name="frmComment">
-		
-			id: 58<br />
-			songid: 22<br />
-			text: hahahah<br />
-			insertdate: 2013-10-22 11:27:48<br />
-			<input type="hidden" name="hidId" value="58" />
-			<input type="hidden" name="hidText" value="hahahah" />
-			<input type="submit" class="btnDelete" name="btnDelete" value="Delete" />
+		// Insert, update, delete ska ske innan Select. Vi kontrollerar först insert, update och delete
 
-		</form>
+		// Om vi vill radera en kommentar. Använder endast det formulär så knappen finns i automatiskt
+		if( isset($_POST["btnDelete"]) ){
+			deleteComment( $dbconnection, $_POST["hidId"] );
+		}
 
-		<h3>Second header</h3>
-								
-		<form action="adminComment.php" method="post" name="frmComment">
-		
-			id: 57<br />
-			songid: 22<br />
-			text: Bästa låten...<br />
-			insertdate: 2013-09-27 08:58:55<br />
-			<input type="hidden" name="hidId" value="57" />
-			<input type="hidden" name="hidText" value="Bästa låten..." />
-			<input type="submit" class="btnDelete" name="btnDelete" value="Delete" />
+		// Lista kommentarer
+		listComments($dbconnection);
 
-		</form>
-		
-	</div>
+		// Stäng anslutningen till databasen
+		myDBClose($dbconnection);
+	}
+	catch( Exception $oE){
+		echo ( $oE->getMessage() );
+	}
+	?>
 </div>
 
 <?php include("incl/footer.php");

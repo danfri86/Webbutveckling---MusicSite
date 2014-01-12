@@ -6,7 +6,7 @@
     	?>
     	<fieldset>
 			<legend>New/Edit Artist</legend>
-			<form action="adminArtist.php" method="post" name="frmNewUpdateArtist" id="frmNewUpdateArtist" enctype="multipart/form-data">
+			<form action="<?php echo($_SERVER["PHP_SELF"]); ?>" method="post" name="frmNewUpdateArtist" id="frmNewUpdateArtist" enctype="multipart/form-data">
 				<input type="hidden" id="hidId" name="hidId" />
 				<input type="hidden" id="hidPictureFileName" name="hidPictureFileName" />
 				<label>
@@ -70,10 +70,8 @@
     function updateArtist($dbConnection, $inArtistId, $inArtist, $inNewPictureFileName, $inOldPictureFileName) {
 
         $strSQL = "UPDATE tblartist SET name='$inArtist', ";
-        if( isset($_POST[$inNewPictureFileName]) ){
+        if( isset($inNewPictureFileName)){
             $strSQL .= "picture='$inNewPictureFileName' ";
-        }else{
-            $strSQL .= "picture='$inOldPictureFileName' ";
         }
         $strSQL .= "WHERE id=$inArtistId;";
 
@@ -83,10 +81,13 @@
     }
 
     function deleteArtist($dbConnection, $inArtistId, $inPictureFileName) {
+        $strSQL = "DELETE FROM tblartist WHERE id='$inArtistId' AND picture='$inPictureFileName';";
 
+        myDBQuery($dbConnection, $strSQL);
     }
 
     function insertArtist($dbConnection, $inArtist, $inNewPictureFileName) {
         $strSQL = "INSERT INTO tblartist(name, picture) VALUES('$inArtist', '$inNewPictureFileName');";
         myDBQuery($dbConnection, $strSQL);
     }
+?>

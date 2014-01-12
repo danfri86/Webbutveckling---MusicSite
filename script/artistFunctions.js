@@ -121,10 +121,12 @@ function validateArtistFormData() {
 $(document).ready(function(){
 	//Klicka på save i formuläret
 	$("form#frmNewUpdateArtist").on("submit", function(theEvent){
-		theEvent.preventDefault();
-		theEvent.stopPropagation();
-		
 		validateArtistFormData();
+
+		if( validateArtistFormData() == false ){
+			theEvent.preventDefault();
+			theEvent.stopPropagation();
+		}
 	});
 
 	//Klicka på reset i formuläret
@@ -135,16 +137,13 @@ $(document).ready(function(){
 	//Klicka på Delete
 	$(".accordion form").each(function(){
 		$(this).on("submit", function(theEvent){
-			theEvent.preventDefault();
-			theEvent.stopPropagation();
 
 			var id = $(this).find("input[name='hidId']").val();
 			var artist = $(this).find("input[name='hidArtist']").val();
 
-			var tabort = verifyDeleteOfArtist( id, artist );
-
-			if(tabort){
-				alert("True");
+			if( verifyDeleteOfArtist(id, artist) == false ){
+				theEvent.preventDefault();
+				theEvent.stopPropagation();
 			}
 		});
 	});
@@ -165,10 +164,3 @@ $(document).ready(function(){
 		});
 	});
 });
-
-
-
-
-
-
-

@@ -4,186 +4,149 @@
 		"selected_items":
 		[
 			[
-				"inar",
-				"inArtistId"
+				"kommen",
+				"kommentarText"
 			],
 			[
-				"change",
-				"changeDate"
+				"mysqli_re",
+				"mysqli_real_escape_string"
 			],
 			[
-				"rec",
-				"recordSet"
+				"kol",
+				"kolumnTva"
 			],
 			[
-				"recor",
-				"recordSet"
-			],
-			[
-				"str",
-				"strSQL"
-			],
-			[
-				"aja",
-				"ajaxReturnData"
-			],
-			[
-				"the",
-				"theCars"
-			],
-			[
-				"ver",
-				"verifyDeleteOfArtist"
-			],
-			[
-				"comm",
-				"commentsRef"
-			],
-			[
-				"mar",
+				"marg",
 				"margin-top"
 			],
 			[
-				"wid",
-				"width"
-			],
-			[
-				"pa",
-				"padding"
-			],
-			[
-				"text-",
-				"text-decoration"
+				"mar",
+				"margin-left"
 			],
 			[
 				"in",
 				"inline-block"
 			],
 			[
-				"di",
-				"display"
+				"margin",
+				"margin-bottom"
 			],
 			[
-				"pos",
-				"position"
+				"backgro",
+				"background-color"
+			],
+			[
+				"font",
+				"font-size"
 			],
 			[
 				"font-s",
 				"font-size"
 			],
 			[
-				"font",
-				"font-family"
+				"back",
+				"background"
 			],
 			[
-				"blo",
-				"block"
-			],
-			[
-				"ab",
-				"absolute"
-			],
-			[
-				"cur",
-				"cursor"
-			],
-			[
-				"bas",
-				"baseline"
-			],
-			[
-				"bo",
-				"bottom"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
-				"he",
-				"height"
-			],
-			[
-				"inlin",
-				"inline-block"
+				"background",
+				"background-size"
 			],
 			[
 				"bac",
 				"background"
 			],
 			[
-				"kontakt-",
-				"kontakt-info"
+				"tabe",
+				"table-cell"
 			],
 			[
-				"max",
-				"max-width"
+				"ta",
+				"table-cell"
 			],
 			[
-				"print",
-				"print_r"
+				"pad",
+				"padding"
 			],
 			[
-				"tj",
-				"tjanstBtn"
+				"di",
+				"display"
 			],
 			[
-				"ful",
-				"full_checkbox"
+				"pa",
+				"padding-top"
 			],
 			[
-				"par",
-				"partnerLank"
+				"marin",
+				"margin-top"
 			],
 			[
-				"wi",
+				"pos",
+				"position"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"bor",
+				"border-color"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"wid",
 				"width"
 			],
 			[
-				"sam",
-				"samarbetspartners"
-			],
-			[
-				"Super",
-				"Super_Custom_Post_Type"
-			],
-			[
-				"margin",
-				"margin-left"
+				"text",
+				"text-align"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/artistFunctions.php",
+			"file": "script/searchFunctions.js",
 			"settings":
 			{
-				"buffer_size": 3419,
+				"buffer_size": 2815,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "adminArtist.php",
+			"contents": "<?php\n\n	/*\n		Spara den nya kommentaren i databasen.\n	*/\n	include(\"../src/databasefunctions.php\");\n\n	$kommentarText = $_POST[$\n	text];\n	$id = $_POST[$id];\n\n	$dbconnection = myDBConnect();\n\n	$strSQL = \"INSERT INTO tblcomment(text, songid) VALUES(\". $kommentarText. \", \". $id .\");\";\n    $recordSet = myDBQuery($dbConnection, $strSQL);\n	\n	//För test returneras dagens datum och en konstant i form av JSON.\n	//{\"date\" : \"dagens datum\", \"comment\" : \"Detta är en kommentar\"}\n	echo(\"{\\\"date\\\" : \\\"\" . date(\"Y-m-d\") . \"\\\", \\\"comment\\\" : \\\"\". $kommentarText .\"\\\"}\");\n?>",
+			"file": "ajax/savecomment.php",
+			"file_size": 577,
+			"file_write_time": 130338373420000000,
 			"settings":
 			{
-				"buffer_size": 1384,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/databaseFunctions.php",
-			"settings":
-			{
-				"buffer_size": 1843,
+				"buffer_size": 559,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "script/artistFunctions.js",
+			"file": "ajax/likesong.php",
 			"settings":
 			{
-				"buffer_size": 4539,
+				"buffer_size": 361,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/songFunctions.php",
+			"settings":
+			{
+				"buffer_size": 4585,
 				"line_ending": "Unix"
 			}
 		}
@@ -191,51 +154,31 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 47.0,
 		"selected_items":
 		[
 			[
-				"inde",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"syntax java",
-				"Set Syntax: JavaScript"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
-			],
-			[
-				"packa",
-				"Package Control: Install Package"
-			],
-			[
-				"indent",
-				"Indentation: Reindent Lines"
+				"rena",
+				"File: Rename"
 			],
 			[
 				"insta",
 				"Package Control: Install Package"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"Install",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Con",
+				"instal",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
-		"height": 125.0
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
 	},
 	"distraction_free":
 	{
@@ -248,83 +191,134 @@
 	},
 	"file_history":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/artistFunctions.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/databas.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/search.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/searchFunctions.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/php-lotto.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/php-post-get3.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/php-post-get2.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/php-post-get.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aa-lektioner/lektion.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/incl/header.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/incl/footer.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/ajax/savecomment.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/searchFunctions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/Boltic.sublime-project",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/php-forelasning.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/ajax/likesong.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminArtist.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/commentFunctions.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminComment.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/songFunctions.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminSong.php",
-		"/Users/daniel/Skola/Webbutveckling/Ajax/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/artistFunctions.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/artistFunctions.php",
-		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/Musicsite.sublime-workspace",
-		"/Users/daniel/Skola/Webbutveckling/R1_ISGB24_HT13/R1_ISGB24_HT13.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/customScripts.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/accordion/js/jquery-ui-1.10.3.custom.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/style/stilmall.css",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/jquery/jquery-2.0.2.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/daniel/wp-content/themes/danielv15/less/base.less",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/Laboration 1 ISGB24 HT13.pdf",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/logout.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminComment.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/uploadFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/songFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/searchFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/search.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/commentFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminSong.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/loginFunctions.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/login.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/header.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/index.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/mixins.less",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/768up.less",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/481up.less",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/main.less",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/page-blogg.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/functions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/js/scripts.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/style.less",
-		"/Users/daniel/Desktop/Pingisturnering/index.html",
-		"/Applications/XAMPP/xamppfiles/htdocs/javascript/laborationer/lab3/myGUIFunctions.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/javascript/lektion8/menudemo.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/javascript/lektion8/menudemo.html",
-		"/Users/daniel/Skola/2012-2013/Javascript/Lektion-8-mar.html",
-		"/Users/daniel/Skola/2012-2013/HTML och CSS/Pingisturnering/index.html",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/options-config.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/header.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/page.php",
-		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1383214645/mapped/fitfreshandfemale.com/public_html/wp-config.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/single-workshops.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/style.css",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/sftp-config.json",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/functions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/img/sektion_bg_1.jpg",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/css/style.css",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/img/banner-profilbild.png",
-		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
-		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/page-redigera-profil.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/sftp-config.json",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/single.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/comments.php",
-		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1382734253/mapped/fitfreshandfemale.com/public_html/wp-content/themes/asaklint-ptonline/comments.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/comments.php",
-		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1382734046/mapped/fitfreshandfemale.com/public_html/wp-content/themes/asaklint/comments.php",
-		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1382734029/mapped/fitfreshandfemale.com/public_html/wp-content/themes/asaklint-ptonline/single.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/page-nytt-inlagg.php",
-		"/var/folders/sf/j9jgxjrj5db83xzg2x7_wj240000gn/T/sublime-sftp-browse-1382731653/mapped/fitfreshandfemale.com/public_html/wp-config.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint/less/grid.less",
-		"/Users/daniel/Arbete/SublimeTest projects/Åsa Klint.sublime-project",
-		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/daniel/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt"
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/logout.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/ajax/likesong.php",
+		"/Users/daniel/.Trash/dbmusic.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/incl/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/searchFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/ajax/savecomment.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/databaseFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/databas.php",
+		"/Users/daniel/Downloads/musicsite/ajax/savecomment.php",
+		"/Users/daniel/Downloads/musicsite/src/searchFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/songFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/commentFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/upload_ogg/colors.ogg",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/upload_jpg/jpg.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/R4UploadFunction.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/R4FileUpload.php",
+		"/Users/daniel/Downloads/dbmusic.sql",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/Musicsite.sublime-project",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/less/forms.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/page-twocolumns.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/custom-post-type/meta-boxes.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/less/main.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/afab/wp-content/themes/afab/single-afab_kategorisidor.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/single-klient-filer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page-filer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/fonts/fontello demo/css/fontello-ie7.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page-testresultat.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/traningsdagbok-inlagg.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/single.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/single.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/style.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/page.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/meta-boxes.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/page-hantera-klienter-orig.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/custom-post-type/custom-post-type.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/daniel/wp-content/themes/danielv15/less/mixins.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/aldrigvila/wp-content/themes/aldrigvila3/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/js/scripts.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/aldrigvila/wp-content/themes/aldrigvila3/js/scripts.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/js/scripts-ck.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/js/scripts-klient.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/aldrigvila/wp-content/themes/aldrigvila3/less/481up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/aldrigvila/wp-content/themes/aldrigvila3/less/768up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/aldrigvila/wp-content/themes/aldrigvila3/less/main.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/less/mixins.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/less/normalize.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/less/style.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/style.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/less/forms.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/less/481up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/custom-post-type/custom-post-type-columns.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/custom-post-type/custom-post-type-columns.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page-chatt.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/js/vendor/jquery-1.9.0.min-ck.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/custom-post-type/custom-post-type.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/less/768up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/custom-post-type/meta-boxes.php",
+		"/Users/daniel/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/fonts/fontello demo/README.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/comments.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/meny.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/js/modernizr.custom.min.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/js/jquery.customSelect.min.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/archive.php",
+		"/Users/daniel/Downloads/gravityforms-export-2014-01-04.xml",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page-redigera-profil.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page-redigera-inlagg.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page-profil.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page-nytt-testresultat.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page-nytt-inlagg.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/page-ny-fil.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/sidebar.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/less/481up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/asaklint/wp-content/themes/asaklint-ptonline/less/main.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/less/main.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/aldrigvila/wp-content/themes/aldrigvila3/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/less/481up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/404.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/js/scripts.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/less/768up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/less/481up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/traningsdagbok-inlagg.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/less/mixins.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/less/mixins.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/less/768up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/less/481up.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/less/main.less",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/less/forms.less",
+		"/Applications/XAMPP/xamppfiles/etc/httpd.conf",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-config.php",
+		"/Volumes/Macintosh HD/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt-klient/.htaccess",
+		"/Volumes/Macintosh HD/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/.htaccess",
+		"/Volumes/Macintosh HD/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/.htaccess",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/.htaccess",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/js/html5shiv.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/.htaccess",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/page-filer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/page-testresultat.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/page-redigera-profil.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/page-redigera-inlagg.php"
 	],
 	"find":
 	{
@@ -342,66 +336,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"id",
-			"fetchCars",
-			"commentsRef",
-			"formRef",
-			"<hr />",
-			"<div class=\"four\">4</div>",
-			"h0",
-			" class=\"3\"",
-			"1",
-			" class=\"1\"",
-			" class=\"2\"",
-			" class=\"4\"",
-			" class=\"5\"",
-			"5",
-			"4",
-			"5",
-			">\n",
-			"240",
-			"320",
-			"h1",
-			"0",
-			"string",
-			"asaklint-settings",
-			"asaklint",
-			"redux_demo",
-			"redux-framework-demo",
-			"object",
-			"options",
-			"asaklint-settings",
-			"Options",
-			"settings",
-			"redux-framework-demo",
-			"large-6",
-			"large",
-			"large-6",
-			"large",
-			"6",
-			"h1",
-			"Samarbetspartners",
-			"samarbetspartners",
-			"0",
-			"article",
-			"else",
-			"article",
-			"mail",
-			"user",
-			"admin_head",
-			"remove_menu_page",
-			"update",
-			"p",
-			"du",
-			"är",
+			"fileSoundFileName",
+			"validateAndMoveUploadedFile",
+			"$_FILES[\"fileSoundFileName\"][\"name\"], -3",
+			"substr($_FILES[\"fileSoundFileName\"][\"name\"])",
+			"validateFile",
+			"(",
+			"musicsite",
+			"ISGB24",
+			"color: red;",
+			"red",
+			"aside",
 			"h3",
-			"p",
-			"p>",
-			"p",
-			"p>",
-			"<p>",
-			"ostmeddelande",
-			"p"
+			"kost",
+			"1.25em",
+			"1.429em",
+			"translateY(0)",
+			"translateY(@offCanvasHeight)",
+			"meny",
+			"translateX",
+			"offCanvasWidth",
+			"Logo",
+			"logo",
+			"Sponsortyp",
+			"sponsortyp",
+			"sponsorer",
+			"open",
+			"sidebar",
+			"dark",
+			"träningsdag",
+			"träningsdagbok",
+			"klient-filer",
+			"testresultat_datum",
+			"klient",
+			"klient-",
+			"testresultat",
+			"testtyp",
+			"testresultat",
+			"klient-testresultat",
+			"testresultat_posts",
+			"Testresultat",
+			"testresultat",
+			"Testresultat",
+			"super",
+			"h2",
+			"btn-rounded",
+			"span",
+			"'",
+			"translateX",
+			"0",
+			"offCanvasWidth",
+			"h2",
+			"h4",
+			"width",
+			"4s",
+			"h2",
+			"span",
+			"traningsdagbok-header",
+			"header",
+			"moln",
+			"turkos",
+			"moln-dark",
+			"betong",
+			"group",
+			"root",
+			"nobody",
+			"User",
+			"h1",
+			"h2",
+			"section-title",
+			"new-edit-btn",
+			"h2",
+			"pagetitle",
+			"h2",
+			"content",
+			"filer",
+			"Filer",
+			"filer",
+			"aside",
+			"fil",
+			"span",
+			"h4",
+			"h2",
+			"aside",
+			"small-12 medium-12 large-12",
+			"aside",
+			"super",
+			"h4",
+			"small",
+			"large",
+			"ptbyemma",
+			"klientComments",
+			"klientsida",
+			"klientComments",
+			"dfComments",
+			"klientsida_comment",
+			"text-align: center",
+			"kommentar",
+			"lock",
+			"4s",
+			"active",
+			"meddelande",
+			"span",
+			"<i",
+			"span",
+			"1",
+			"76px",
+			"2",
+			"78px",
+			"2",
+			"0px",
+			"white",
+			"1",
+			"ff0000",
+			"2px",
+			"5",
+			"class=\"small-9 medium-7 large-7 puls-tid",
+			".border",
+			"h1",
+			"small-12",
+			"right",
+			".border",
+			"open-sans;",
+			"open-sans",
+			"asfalt",
+			"moln",
+			"betong",
+			"betong-dark",
+			"bla-dark"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -409,7 +471,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -420,483 +481,122 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/artistFunctions.php",
+					"file": "script/searchFunctions.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3419,
+						"buffer_size": 2815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2953,
-								2973
+								2590,
+								2590
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"sublimelinter": "save-only",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 764.0,
+						"translation.y": 905.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "adminArtist.php",
+					"file": "ajax/savecomment.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1384,
+						"buffer_size": 559,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								867,
-								867
+								127,
+								127
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"sublimelinter": "save-only",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 144.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/databaseFunctions.php",
-					"settings":
-					{
-						"buffer_size": 1843,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								474,
-								474
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"sublimelinter": "save-only",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "script/artistFunctions.js",
+					"buffer": 2,
+					"file": "ajax/likesong.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4539,
+						"buffer_size": 361,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3352,
-								3383
+								247,
+								247
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"sublimelinter": "save-only",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1587.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/songFunctions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3565,
+								3565
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1455.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -933,13 +633,14 @@
 		]
 	},
 	"menu_visible": true,
-	"output.sftp":
+	"output.find_results":
 	{
-		"height": 100.0
+		"height": 0.0
 	},
+	"project": "Musicsite.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -948,180 +649,276 @@
 		"selected_items":
 		[
 			[
-				"artic",
-				"script/artistFunctions.js"
-			],
-			[
 				"artist",
-				"script/artistFunctions.js"
-			],
-			[
-				"artis",
-				"src/artistFunctions.php"
-			],
-			[
-				"datab",
-				"src/databaseFunctions.php"
-			],
-			[
-				"admin",
 				"adminArtist.php"
 			],
 			[
-				"sea",
-				"search.php"
+				"song",
+				"src/songFunctions.php"
 			],
 			[
-				"searchf",
-				"script/searchFunctions.js"
-			],
-			[
-				"save",
-				"ajax/savecomment.php"
-			],
-			[
-				"searchfu",
-				"script/searchFunctions.js"
+				"sarch",
+				"src/searchFunctions.php"
 			],
 			[
 				"sear",
 				"search.php"
 			],
 			[
-				"heade",
-				"incl/header.php"
-			],
-			[
-				"func",
-				"script/artistFunctions.js"
-			],
-			[
-				"like",
-				"ajax/likesong.php"
-			],
-			[
-				"arti",
-				"script/artistFunctions.js"
-			],
-			[
-				"foot",
-				"incl/footer.php"
-			],
-			[
-				"song",
-				"script/songFunctions.js"
-			],
-			[
-				"header",
-				"incl/header.php"
-			],
-			[
-				"hea",
-				"incl/header.php"
-			],
-			[
-				"cusom",
-				"script/customScripts.js"
-			],
-			[
-				"footer",
-				"incl/footer.php"
+				"logou",
+				"logout.php"
 			],
 			[
 				"head",
 				"incl/header.php"
 			],
 			[
-				"admi",
-				"adminArtist.php"
-			],
-			[
-				"css",
-				"style/stilmall.css"
-			],
-			[
-				"comme",
+				"admin",
 				"adminComment.php"
 			],
 			[
-				"adminso",
-				"adminSong.php"
+				"like",
+				"ajax/likesong.php"
 			],
 			[
-				"mixin",
-				"asaklint/less/mixins.less"
+				"header",
+				"incl/header.php"
 			],
 			[
-				"blog",
-				"asaklint/page-blogg.php"
+				"date",
+				"src/databaseFunctions.php"
 			],
 			[
-				"index",
-				"asaklint/index.php"
+				"artis",
+				"adminArtist.php"
 			],
 			[
-				"functio",
-				"asaklint/functions.php"
+				"save",
+				"ajax/savecomment.php"
 			],
 			[
-				"scrip",
-				"asaklint/js/scripts.js"
+				"searc",
+				"script/searchFunctions.js"
 			],
 			[
-				"style.le",
-				"asaklint/less/style.less"
+				"commen",
+				"src/commentFunctions.php"
 			],
 			[
-				"76",
-				"asaklint/less/768up.less"
+				"forms",
+				"lindanorstedt/less/forms.less"
 			],
 			[
-				"481",
-				"asaklint/less/481up.less"
+				"form",
+				"lindanorstedt/less/forms.less"
 			],
 			[
-				"main",
-				"asaklint/less/main.less"
+				"meta",
+				"lindanorstedt/custom-post-type/meta-boxes.php"
 			],
 			[
-				"scri",
-				"asaklint/js/scripts.js"
+				"filer",
+				"lindanorstedt-klient/single-klient-filer.php"
 			],
 			[
-				"option",
-				"asaklint/options-config.php"
+				"test",
+				"lindanorstedt-klient/page-testresultat.php"
 			],
 			[
-				"page",
-				"asaklint/page.php"
-			],
-			[
-				"functions",
-				"asaklint-ptonline/functions.php"
-			],
-			[
-				"function",
-				"asaklint/functions.php"
-			],
-			[
-				"blogg",
-				"asaklint/page-blogg.php"
-			],
-			[
-				"rediger",
-				"asaklint-ptonline/page-redigera-profil.php"
-			],
-			[
-				"funcio",
-				"asaklint-ptonline/functions.php"
+				"tranin",
+				"lindanorstedt-klient/traningsdagbok-inlagg.php"
 			],
 			[
 				"single",
-				"asaklint-ptonline/single.php"
+				"lindanorstedt-klient/single.php"
 			],
 			[
-				"",
-				"untitled"
+				"singl",
+				"lindanorstedt/single.php"
+			],
+			[
+				"func",
+				"lindanorstedt/functions.php"
+			],
+			[
+				"foo",
+				"lindanorstedt/footer.php"
+			],
+			[
+				"fun",
+				"lindanorstedt/functions.php"
+			],
+			[
+				"page",
+				"lindanorstedt/page.php"
+			],
+			[
+				"footer",
+				"lindanorstedt/footer.php"
+			],
+			[
+				"inde",
+				"lindanorstedt/index.php"
+			],
+			[
+				"foot",
+				"lindanorstedt/footer.php"
+			],
+			[
+				"funct",
+				"lindanorstedt/functions.php"
+			],
+			[
+				"script",
+				"lindanorstedt/js/scripts.js"
+			],
+			[
+				"mixins",
+				"lindanorstedt-klient/less/mixins.less"
+			],
+			[
+				"heade",
+				"lindanorstedt/header.php"
+			],
+			[
+				"norma",
+				"lindanorstedt/less/normalize.less"
+			],
+			[
+				"style.le",
+				"lindanorstedt/less/style.less"
+			],
+			[
+				"main",
+				"lindanorstedt-klient/less/main.less"
+			],
+			[
+				"76",
+				"lindanorstedt/less/768up.less"
+			],
+			[
+				"48",
+				"lindanorstedt/less/481up.less"
+			],
+			[
+				"mixin",
+				"lindanorstedt/less/mixins.less"
+			],
+			[
+				"colu",
+				"lindanorstedt/custom-post-type/custom-post-type-columns.php"
+			],
+			[
+				"post-ty",
+				"lindanorstedt/custom-post-type/custom-post-type.php"
+			],
+			[
+				"index",
+				"lindanorstedt/index.php"
+			],
+			[
+				"columns",
+				"lindanorstedt/custom-post-type/custom-post-type-columns.php"
+			],
+			[
+				"custom",
+				"lindanorstedt/custom-post-type/custom-post-type.php"
+			],
+			[
+				"custom-po",
+				"lindanorstedt/custom-post-type/custom-post-type.php"
+			],
+			[
+				"function",
+				"lindanorstedt/functions.php"
+			],
+			[
+				"column",
+				"lindanorstedt-klient/custom-post-type/custom-post-type-columns.php"
+			],
+			[
+				"functio",
+				"lindanorstedt/functions.php"
+			],
+			[
+				"custom-post-type.php",
+				"lindanorstedt-klient/custom-post-type/custom-post-type.php"
+			],
+			[
+				"archi",
+				"lindanorstedt-klient/archive.php"
+			],
+			[
+				"inlagg",
+				"lindanorstedt-klient/traningsdagbok-inlagg.php"
+			],
+			[
+				"chatt",
+				"lindanorstedt-klient/page-chatt.php"
+			],
+			[
+				"inlag",
+				"lindanorstedt-klient/traningsdagbok-inlagg.php"
+			],
+			[
+				"meny",
+				"lindanorstedt-klient/meny.php"
+			],
+			[
+				"hea",
+				"lindanorstedt-klient/header.php"
+			],
+			[
+				"481",
+				"lindanorstedt-klient/less/481up.less"
+			],
+			[
+				"scripts",
+				"lindanorstedt-klient/js/scripts-klient.js"
+			],
+			[
+				"trani",
+				"lindanorstedt-klient/traningsdagbok-header.php"
+			],
+			[
+				"style",
+				"lindanorstedt-klient/style.css"
+			],
+			[
+				"chat",
+				"ptonline2-klient/page-chatt.php"
+			],
+			[
+				"testre",
+				"ptonline2-klient/page-testresultat.php"
+			],
+			[
+				"sidebar",
+				"ptonline2-klient/sidebar.php"
+			],
+			[
+				"functions",
+				"ptonline2-klient/functions.php"
+			],
+			[
+				"comment",
+				"ptonline2-klient/comments.php"
+			],
+			[
+				"comme",
+				"ptonline2-pt/comments.php"
+			],
+			[
+				"font",
+				"ptonline2-pt/fonts/fontello demo/css/fontello.css"
+			],
+			[
+				"scri",
+				"ptonline2-klient/js/scripts-klient.js"
+			],
+			[
+				"foter",
+				"ptonline2-klient/footer.php"
 			]
 		],
 		"width": 0.0
@@ -1132,20 +929,38 @@
 		"selected_items":
 		[
 			[
-				"",
+				"linda",
+				"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/Linda Norstedt.sublime-project"
+			],
+			[
+				"bol",
 				"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/Boltic.sublime-project"
 			],
 			[
-				"newhem",
-				"/Applications/XAMPP/xamppfiles/htdocs/newhem/wp-content/themes/newhem2/Newhem.sublime-project"
+				"daniel",
+				"/Applications/XAMPP/xamppfiles/htdocs/daniel/wp-content/themes/danielv15/Daniel.sublime-project"
 			]
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": true,
-	"show_open_files": true,
+	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 216.0,
-	"status_bar_visible": true
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }

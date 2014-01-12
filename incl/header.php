@@ -30,8 +30,7 @@
 				?>
 				<script type="text/javascript" src="script/<?php echo($script); ?>"></script>
 			<?php }
-			?>
-			
+			?>			
             
             <title><?php echo($title); ?></title>
 

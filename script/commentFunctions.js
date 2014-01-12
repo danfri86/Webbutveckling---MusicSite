@@ -18,16 +18,12 @@ $(document).ready(function(){
 	//Klicka på Delete
 	$("form").each(function(){
 		$(this).on("submit", function(theEvent){
-			theEvent.preventDefault();
-			theEvent.stopPropagation();
-
 			var id = $(this).find("input[name='hidId']").val();
 			var text = $(this).find("input[name='hidText']").val();
 
-			var tabort = verifyDeleteOfComment( id, text );
-
-			if(tabort){
-				alert("True");
+			if( verifyDeleteOfComment( id, text ) == false ){
+				theEvent.preventDefault();
+				theEvent.stopPropagation();
 			}
 		});
 	});
