@@ -42,7 +42,6 @@
     		$changeDate = $record["changedate"];
 
     		// Fortsätt skriva ut resen av formuläret här med data från databasen. Använd variablerna ovan.
-    		// Se adminArtist.php hur det är uppbyggt.
 
             ?>
             <h3><?php echo $name ?></h3>
@@ -63,7 +62,7 @@
             <?php
     	}
 
-    	// Frigör databasen
+    	// Frigör minnet från databasen
     	myDBFreeResult($recordSet);
     }
 
@@ -74,8 +73,6 @@
             $strSQL .= "picture='$inNewPictureFileName' ";
         }
         $strSQL .= "WHERE id=$inArtistId;";
-
-        echo $strSQL;
 
         myDBQuery($dbConnection, $strSQL);
     }

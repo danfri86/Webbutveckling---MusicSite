@@ -161,10 +161,7 @@ $(document).ready(function(){
 		var count = $(formRef).find("input[name='hidCount']").val();
 		
 
-		$(formRef).find("input[name='btnEdit']").on("click", function(theEvent){
-			theEvent.preventDefault();
-			theEvent.stopPropagation();
-
+		$(formRef).find("input[name='btnEdit']").on("click", function(){
 			copySongFormData( id, filnamn , artistId, title, count );
 		});
 	});

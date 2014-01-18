@@ -32,7 +32,7 @@
 	*	@param string $strSQL SQL frågan i klartext
 	*	@return resource Tabell med utsökt data.
 	*/
-	function myDBQuery($dbConnection, $strSQL) {	
+	function myDBQuery($dbConnection, $strSQL) {
 	
 		if(!$recordSet = mysqli_query($dbConnection, $strSQL)) {
 			throw new Exception(mysqli_errno($dbConnection).": ".mysqli_error($dbConnection));

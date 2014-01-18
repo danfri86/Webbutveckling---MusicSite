@@ -1,7 +1,7 @@
 <?php
 	$script="searchFunctions.js";
 	$title="Search";
-	//$slimbox = TRUE;
+	$slimbox = TRUE;
 	//$accordion = True,
 	$jquery = TRUE;
 	include("incl/header.php");

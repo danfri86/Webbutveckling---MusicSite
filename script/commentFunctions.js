@@ -16,7 +16,7 @@ function verifyDeleteOfComment(inId, inText){
 
 $(document).ready(function(){
 	//Klicka på Delete
-	$("form").each(function(){
+	$("form").each(function(theEvent){
 		$(this).on("submit", function(theEvent){
 			var id = $(this).find("input[name='hidId']").val();
 			var text = $(this).find("input[name='hidText']").val();

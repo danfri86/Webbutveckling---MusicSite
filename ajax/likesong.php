@@ -3,16 +3,24 @@
 	/*
 		Öka tblsong.count med ett och spara i databasen.
 	*/
-	include("../src/databasefunctions.php");
+	include($_SERVER["DOCUMENT_ROOT"]. "/musicsite/src/databaseFunctions.php");
+
+	$count = $_POST['count'];
+	$latid = $_POST['latid'];
+
+	$count++;
 
 	$dbconnection = myDBConnect();
 
-	$strSQL = "SELECT count FROM tblsong
-	WHERE id = ;";
-    $recordSet = myDBQuery($dbConnection, $strSQL);
+	$strSQL = "UPDATE tblsong SET count= ". $count ." WHERE id= ". $latid .";";
+    
+    myDBQuery($dbconnection, $strSQL);
+
+    // Stäng anslutningen till databasen
+	myDBClose($dbconnection);
 	
 	//För test returnerars konstanten 100 i form av JSON.
 	//{"gilla" : "100"}
-	echo("{\"like\" : \"100\"}");
+	echo("{\"like\" : \"". $count ."\"}");
 	
 ?>

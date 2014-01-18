@@ -31,8 +31,10 @@
             ?>
 
             Name: <?php echo $name; ?>	<br />
+            <a href="upload_jpg/<?php echo $picture; ?>" rel="lightbox">
 			<img src="upload_jpg/<?php echo $picture; ?>" alt="<?php echo $picture; ?>" />
-			<br />
+			</a>
+            <br />
             <?php
     	}
 
@@ -116,6 +118,7 @@
     	$strSQL = "SELECT * FROM tblcomment WHERE songid=". $inSongId .";";
     	$recordSet = myDBQuery($inDBConnection, $strSQL);
 
+        echo '<div data-comments="comments" data-id="'. $inSongId .'">';
     	// Gå igenom tabellen rad för rad och lägg innehållet en vektor $record
     	while( $record = mysqli_fetch_assoc($recordSet) ){
     		// Skapa variabler av allt från databasen
@@ -123,15 +126,13 @@
     		$insertdate = $record["insertdate"];
 
             ?>
-
-			<div data-comments="comments" data-id="<?php echo $inSongId; ?>">
 				<p>
 					<b><?php echo $insertdate; ?>: </b>
 					<i><?php echo $text; ?></i>
 				</p>
-			</div>
             <?php
     	}
+        echo '</div>';
 
     	// Frigör databasen
     	myDBFreeResult($recordSet);

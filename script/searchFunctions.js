@@ -11,9 +11,7 @@ $(document).ready(function(){
 		$("<br/>").insertAfter(aRef);
 
 		aRef.on("click", function(theEvent){
-			//Avbryt att vi ska gå dit länken visar
 			theEvent.preventDefault();
-			//Så att det bara klickas på länken, och klicken går inte vidare ut till föräldrar(body, html etc.)
 			theEvent.stopPropagation();
 
 			//Visa/göm <p> som ligger i länken
@@ -31,9 +29,7 @@ $(document).ready(function(){
 		$("<br/>").insertAfter(aRef);
 
 		aRef.on("click", function(theEvent){
-			//Avbryt att vi ska gå dit länken visar
 			theEvent.preventDefault();
-			//Så att det bara klickas på länken, och klicken går inte vidare ut till föräldrar(body, html etc.)
 			theEvent.stopPropagation();
 
 			//Visa/göm <p> som ligger i länken
@@ -44,15 +40,20 @@ $(document).ready(function(){
 	// Lägg till likes med AJAX
 	$("a[data-id]").each(function(){
 		var lank = $(this);
-		$(this).on("click", function(){
+		$(this).on("click", function(theEvent){
+			theEvent.preventDefault();
+			theEvent.stopPropagation();
+			
+			var count = $("span[data-id="+lank.attr("data-id")+"]").text();
+			var latid = lank.attr("data-id");
+
 			$.ajax({
 				timeout: 5000,
 				dataType: "json",
 				type: "post",
+				data: { "count": count, "latid": latid },
 				url: "ajax/likesong.php",
 				success: function(ajaxReturnData){
-					//alert(ajaxReturnData);
-
 					// Stoppa in data på sidan här, med hjälp av jQuery					
 					$("span[data-id="+lank.attr("data-id")+"]").text(ajaxReturnData.like);
 				},
@@ -71,18 +72,17 @@ $(document).ready(function(){
 			theEvent.preventDefault();
 			theEvent.stopPropagation();
 
+			//Skapa variabler
+			var id = $(form).find($("input[name='hidId']")).val();
+			var text = $(form).find($("textarea")).val();
+
 			$.ajax({
 				timeout: 5000,
 				dataType: "json",
 				type: "post",
+				data: { "id" : id , "text" : text },
 				url: "ajax/savecomment.php",
 				success: function(ajaxReturnData){
-					alert(ajaxReturnData);
-
-					//Skicka med låt-id och text som är kommentaren här, direkt efter url?
-					var id = $("input").val($(form.attr("data-id")));
-					var text = $(form+" textarea[name=txtComment]");
-
 					//JSON
 					// Stoppa in data på sidan här, med hjälp av jQuery
 					var kommentar = "<p><b>"+ ajaxReturnData.date +":</b> ";
@@ -93,7 +93,10 @@ $(document).ready(function(){
 				error: function(xhr, status, error){
 					alert(xhr.responseText + " : " + status + " : " + error);
 				},
-				complete: function(xhr, status){}
+				complete: function(xhr, status){
+					// Töm textarean
+					$(form).find($("textarea")).val("");
+				}
 			});
 		});
 	});

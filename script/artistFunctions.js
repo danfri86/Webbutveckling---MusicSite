@@ -156,10 +156,7 @@ $(document).ready(function(){
 		var artist = $(formRef).find("input[name='hidArtist']").val();
 		var filnamn = $(formRef).find("input[name='hidPictureFileName']").val();
 
-		$(formRef).find("input[name='btnEdit']").on("click", function(theEvent){
-			theEvent.preventDefault();
-			theEvent.stopPropagation();
-
+		$(formRef).find("input[name='btnEdit']").on("click", function(){
 			copyArtistFormData( id, filnamn , artist );
 		});
 	});

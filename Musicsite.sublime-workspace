@@ -119,35 +119,24 @@
 			"file": "script/searchFunctions.js",
 			"settings":
 			{
-				"buffer_size": 2815,
+				"buffer_size": 3022,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<?php\n\n	/*\n		Spara den nya kommentaren i databasen.\n	*/\n	include(\"../src/databasefunctions.php\");\n\n	$kommentarText = $_POST[$\n	text];\n	$id = $_POST[$id];\n\n	$dbconnection = myDBConnect();\n\n	$strSQL = \"INSERT INTO tblcomment(text, songid) VALUES(\". $kommentarText. \", \". $id .\");\";\n    $recordSet = myDBQuery($dbConnection, $strSQL);\n	\n	//För test returneras dagens datum och en konstant i form av JSON.\n	//{\"date\" : \"dagens datum\", \"comment\" : \"Detta är en kommentar\"}\n	echo(\"{\\\"date\\\" : \\\"\" . date(\"Y-m-d\") . \"\\\", \\\"comment\\\" : \\\"\". $kommentarText .\"\\\"}\");\n?>",
-			"file": "ajax/savecomment.php",
-			"file_size": 577,
-			"file_write_time": 130338373420000000,
-			"settings":
-			{
-				"buffer_size": 559,
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "ajax/likesong.php",
 			"settings":
 			{
-				"buffer_size": 361,
+				"buffer_size": 556,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/songFunctions.php",
+			"file": "ajax/savecomment.php",
 			"settings":
 			{
-				"buffer_size": 4585,
-				"line_ending": "Unix"
+				"buffer_size": 659,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -191,34 +180,40 @@
 	},
 	"file_history":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminArtist.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/artistFunctions.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/artistFunctions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminComment.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/uploadFunctions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/songFunctions.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/searchFunctions.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/search.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/commentFunctions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminSong.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/loginFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/ajax/savecomment.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/artistFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/artistFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminArtist.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminComment.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/uploadFunctions.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/adminSong.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/databaseFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/songFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/songFunctions.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/loginFunctions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/incl/mainmenu.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/databas.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/php-lotto.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/php-post-get.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/php-post-get3.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/php-post-get2.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/R4UploadFunction.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/R4GUI.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/R4FileUpload.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/commentFunctions.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/logout.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/ajax/likesong.php",
 		"/Users/daniel/.Trash/dbmusic.sql",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/incl/header.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/searchFunctions.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/ajax/savecomment.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/src/databaseFunctions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/databas.php",
 		"/Users/daniel/Downloads/musicsite/ajax/savecomment.php",
 		"/Users/daniel/Downloads/musicsite/src/searchFunctions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/songFunctions.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/commentFunctions.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/upload_ogg/colors.ogg",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/upload_jpg/jpg.txt",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/R4UploadFunction.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/aaa-lektioner/R4FileUpload.php",
 		"/Users/daniel/Downloads/dbmusic.sql",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/Musicsite.sublime-project",
 		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/less/forms.less",
@@ -312,13 +307,7 @@
 		"/Volumes/Macintosh HD/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/.htaccess",
 		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/.htaccess",
 		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/lindanorstedt/js/html5shiv.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/.htaccess",
-		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-config.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/wordpress/wp-config.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/page-filer.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/page-testresultat.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/page-redigera-profil.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-klient/page-redigera-inlagg.php"
+		"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/.htaccess"
 	],
 	"find":
 	{
@@ -336,6 +325,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"",
+			"dbConnection",
+			"dbconnection",
+			"_POST",
 			"fileSoundFileName",
 			"validateAndMoveUploadedFile",
 			"$_FILES[\"fileSoundFileName\"][\"name\"], -3",
@@ -459,11 +452,7 @@
 			".border",
 			"open-sans;",
 			"open-sans",
-			"asfalt",
-			"moln",
-			"betong",
-			"betong-dark",
-			"bla-dark"
+			"asfalt"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -481,7 +470,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -490,15 +479,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2815,
+						"buffer_size": 3022,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2590,
-								2590
+								2192,
+								2192
 							]
 						],
 						"settings":
@@ -507,56 +496,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 905.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "ajax/savecomment.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 559,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								127,
-								127
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 861.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "ajax/likesong.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 361,
+						"buffer_size": 556,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								247,
-								247
+								365,
+								365
 							]
 						],
 						"settings":
@@ -568,35 +528,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/songFunctions.php",
+					"buffer": 2,
+					"file": "ajax/savecomment.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4585,
+						"buffer_size": 659,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3565,
-								3565
+								319,
+								319
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 1455.0,
+						"translation.x": 213.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -649,8 +610,56 @@
 		"selected_items":
 		[
 			[
+				"searc",
+				"src/searchFunctions.php"
+			],
+			[
+				"save",
+				"ajax/savecomment.php"
+			],
+			[
+				"artis",
+				"script/artistFunctions.js"
+			],
+			[
+				"search",
+				"src/searchFunctions.php"
+			],
+			[
+				"sear",
+				"search.php"
+			],
+			[
+				"art",
+				"src/artistFunctions.php"
+			],
+			[
+				"artistf",
+				"src/artistFunctions.php"
+			],
+			[
+				"dateb",
+				"src/databaseFunctions.php"
+			],
+			[
+				"date",
+				"src/databaseFunctions.php"
+			],
+			[
 				"artist",
-				"adminArtist.php"
+				"src/artistFunctions.php"
+			],
+			[
+				"data",
+				"src/databaseFunctions.php"
+			],
+			[
+				"songfunc",
+				"src/songFunctions.php"
+			],
+			[
+				"songfun",
+				"script/songFunctions.js"
 			],
 			[
 				"song",
@@ -659,10 +668,6 @@
 			[
 				"sarch",
 				"src/searchFunctions.php"
-			],
-			[
-				"sear",
-				"search.php"
 			],
 			[
 				"logou",
@@ -683,22 +688,6 @@
 			[
 				"header",
 				"incl/header.php"
-			],
-			[
-				"date",
-				"src/databaseFunctions.php"
-			],
-			[
-				"artis",
-				"adminArtist.php"
-			],
-			[
-				"save",
-				"ajax/savecomment.php"
-			],
-			[
-				"searc",
-				"script/searchFunctions.js"
 			],
 			[
 				"commen",
@@ -957,7 +946,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":
