@@ -15,6 +15,8 @@
 	include("incl/header.php");
 	
 ?>
+
+<script type="text/javascript" src="clientwidth.js"></script>
 <div id="content">
 		
 	<h1>Admin Comment</h1>
