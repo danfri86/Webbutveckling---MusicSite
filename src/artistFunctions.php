@@ -64,18 +64,36 @@
 
     function updateArtist($dbConnection, $inArtistId, $inArtist, $inNewPictureFileName, $inOldPictureFileName) {
 
-        $strSQL = "UPDATE tblartist SET name='$inArtist', ";
+        $strSQL = "UPDATE tblartist SET name='$inArtist'";
 
-        if( isset($_FILES[$inNewPictureFileName]['name']))
-            $strSQL .= "picture='$inNewPictureFileName' ";
+        if( !empty($inNewPictureFileName))
+            $strSQL .= ", picture='$inNewPictureFileName' ";
 
         $strSQL .= "WHERE id=$inArtistId;";
+
+        if( !empty($inOldPictureFileName) )
+            unlink($_SERVER["DOCUMENT_ROOT"]."/musicsite/upload_jpg/".$inOldPictureFileName);
 
         myDBQuery($dbConnection, $strSQL);
     }
 
     function deleteArtist($dbConnection, $inArtistId, $inPictureFileName) {
-        $strSQL = "DELETE FROM tblartist WHERE id='$inArtistId' AND picture='$inPictureFileName';";
+        $artistlat = "SELECT sound FROM tblsong WHERE artistid=$inArtistId;";
+
+        $artistlatResults = myDBQuery($dbConnection, $artistlat);
+
+        while( $record = mysqli_fetch_assoc($artistlatResults) )
+            $artistlatValue = $record["sound"];
+
+        myDBQuery($dbConnection, $artistlat);
+
+        $strSQL = "DELETE tblartist, tblsong FROM tblartist, tblsong WHERE tblartist.id=$inArtistId AND tblsong.artistid=$inArtistId;";
+
+        if( !empty($inPictureFileName) )
+            unlink($_SERVER["DOCUMENT_ROOT"]."/musicsite/upload_jpg/".$inPictureFileName);
+
+        if( !empty($artistlat) )
+            unlink($_SERVER["DOCUMENT_ROOT"]."/musicsite/upload_ogg/".$artistlatValue);
 
         myDBQuery($dbConnection, $strSQL);
     }

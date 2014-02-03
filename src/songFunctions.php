@@ -107,13 +107,14 @@
 
     function updateSong($inDBConnection, $inSongId, $inArtistId, $inCount, $inTitle, $inNewSongFileName, $inOldSongFileName) {
     	
-    	$strSQL = "UPDATE tblsong SET title='$inTitle', count='$inCount', artistid='$inArtistId', ";
-        if( isset($_POST[$inNewSongFileName]) ){
-            $strSQL .= "sound='$inNewSongFileName' ";
-        }else{
-            $strSQL .= "sound='$inOldSongFileName' ";
-        }
+    	$strSQL = "UPDATE tblsong SET title='$inTitle', count='$inCount', artistid='$inArtistId'";
+        if( !empty($inNewSongFileName) )
+            $strSQL .= ", sound='$inNewSongFileName' ";
+        
         $strSQL .= "WHERE id=$inSongId;";
+
+        if( !empty($inOldSongFileName) )
+            unlink($_SERVER["DOCUMENT_ROOT"]."/musicsite/upload_ogg/".$inOldSongFileName);
 
         myDBQuery($inDBConnection, $strSQL);
     }
@@ -121,6 +122,9 @@
     function deleteSong($inDBConnection, $inSongId, $inSongFileName) {
     	$strSQL = "DELETE FROM tblsong WHERE id='$inSongId' AND sound='$inSongFileName';";
 
+    	if( !empty($inSongFileName) )
+            unlink($_SERVER["DOCUMENT_ROOT"]."/musicsite/upload_ogg/".$inSongFileName);
+        
         myDBQuery($inDBConnection, $strSQL);
     }
 
