@@ -5,8 +5,15 @@
 	*/
 	include($_SERVER["DOCUMENT_ROOT"]. "/musicsite/src/databaseFunctions.php");
 
-	$kommentarText = strip_tags( $_POST['text'] );
-	$id = strip_tags( $_POST['id'] );
+	if( empty($_POST["text"]) )
+		echo 'Du måste skriva någonting!';
+	else
+		$kommentarText = strip_tags( $_POST['text'] );
+
+	if( empty($_POST["text"]) )
+		echo 'Det finns inget id';
+	else
+		$id = strip_tags( $_POST['id'] );
 
 	$dbconnection = myDBConnect();
 
@@ -19,9 +26,6 @@
 
     // Stäng anslutningen till databasen
 	myDBClose($dbconnection);
-
-	//För test returneras dagens datum och en konstant i form av JSON.
-	//{"date" : "dagens datum", "comment" : "Detta är en kommentar"};
 
 	echo("{\"date\" : \"" . date("Y-m-d G:i:s") . "\", \"comment\" : \"". $kommentarText ."\"}");
 ?>

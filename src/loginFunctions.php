@@ -1,5 +1,4 @@
 <?php
-	/* Förslag på funktioner (inklusive parametrar) som behövs för att hantera användare och sessioner */
     function validateUser($inDBConnection, $inUserName, $inPassWord) {
     	$inUserName = mysqli_real_escape_string($inDBConnection, $inUserName);
     	$inPassWord = mysqli_real_escape_string($inDBConnection, $inPassWord);

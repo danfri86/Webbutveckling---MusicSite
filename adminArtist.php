@@ -27,9 +27,7 @@
 	try{
 		$dbconnection = myDBConnect();
 
-		// Insert, update, delete ska ske innan Select. Vi kontrollerar först insert, update och delete
-
-		// Om vi vill spara info om artist med "New/Edit Artist"
+		// Om vi vill spara artist med "New/Edit Artist"
 		if( isset($_POST["btnSave"]) ){
 			// Finns inte hidId så sparas en ny artist
 			if( empty($_POST["hidId"]) ){
@@ -47,7 +45,7 @@
 			}
 		}
 
-		// Om vi vill radera en artist. Använder endast det formulär så knappen finns i automatiskt
+		// Om vi vill radera en artist.
 		if( isset($_POST["btnDelete"]) ){
 			deleteArtist( $dbconnection, $_POST["hidId"], $_POST["hidPictureFileName"] );
 		}

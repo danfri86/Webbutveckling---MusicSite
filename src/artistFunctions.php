@@ -1,6 +1,4 @@
 <?php
-	/* Förslag på funktioner (inklusive parametrar) som behövs för att administrera en artister */
-
     function printArtistForm() {
     	// Skriv ut "New/Edit Artist" formuläret
     	?>
@@ -41,8 +39,6 @@
     		$picture = $record["picture"];
     		$changeDate = $record["changedate"];
 
-    		// Fortsätt skriva ut resen av formuläret här med data från databasen. Använd variablerna ovan.
-
             ?>
             <h3><?php echo $name ?></h3>
     
@@ -69,9 +65,10 @@
     function updateArtist($dbConnection, $inArtistId, $inArtist, $inNewPictureFileName, $inOldPictureFileName) {
 
         $strSQL = "UPDATE tblartist SET name='$inArtist', ";
-        if( isset($inNewPictureFileName)){
+
+        if( isset($_FILES[$inNewPictureFileName]['name']))
             $strSQL .= "picture='$inNewPictureFileName' ";
-        }
+
         $strSQL .= "WHERE id=$inArtistId;";
 
         myDBQuery($dbConnection, $strSQL);

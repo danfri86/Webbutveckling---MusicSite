@@ -17,9 +17,7 @@
 	try{
 		$dbconnection = myDBConnect();
 
-		// Insert, update, delete ska ske innan Select. Vi kontrollerar först insert, update och delete
-
-		// Om vi vill spara info om artist med "New/Edit Song"
+		// Om en kommentar skrivs
 		if( isset($_POST["btnSave"]) ){
 			insertComment( $dbconnection, $_POST["selArtistId"], $_POST["txtCount"], $_POST["txtTitle"], $_FILES["fileSoundFileName"]["name"] );
 		}
@@ -27,7 +25,7 @@
 		printSearchForm();
 
 		if( isset($_POST["txtSearch"])){
-			// Lista sånger
+			// Lista artister
 			listArtists($dbconnection, $_POST["txtSearch"]);
 		}
 

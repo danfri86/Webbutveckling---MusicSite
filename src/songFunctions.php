@@ -1,7 +1,6 @@
 <?php
-	/* Förslag på funktioner (inklusive parametrar) som behövs för att administrera en sång */
     function printSongForm($inDBConnection) {
-    	// Skriv ut "New/Edit Artist" formuläret
+    	// Skriv ut "New/Edit Song" formuläret
     	?>
     	<form action="<?php echo($_SERVER["PHP_SELF"]); ?>" method="post" id="frmNewUpdateSong" name="frmNewUpdateSong" enctype="multipart/form-data">
 		
@@ -60,7 +59,7 @@
     }
 
     function listSongs($inDBConnection) {
-    	// Hämta all info om artister
+    	// Hämta all info om låtar
     	$strSQL = "SELECT * FROM tblsong;";
     	$recordSet = myDBQuery($inDBConnection, $strSQL);
 
@@ -73,9 +72,6 @@
     		$sound = $record["sound"];
     		$count = $record["count"];
     		$changeDate = $record["changedate"];
-
-    		// Fortsätt skriva ut resen av formuläret här med data från databasen. Använd variablerna ovan.
-    		// Se adminArtist.php hur det är uppbyggt.
 
             ?>
             <h3><?php echo $title ?></h3>
@@ -110,6 +106,7 @@
     }
 
     function updateSong($inDBConnection, $inSongId, $inArtistId, $inCount, $inTitle, $inNewSongFileName, $inOldSongFileName) {
+    	
     	$strSQL = "UPDATE tblsong SET title='$inTitle', count='$inCount', artistid='$inArtistId', ";
         if( isset($_POST[$inNewSongFileName]) ){
             $strSQL .= "sound='$inNewSongFileName' ";

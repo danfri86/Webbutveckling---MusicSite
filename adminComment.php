@@ -8,7 +8,7 @@
 	
 	$script="commentFunctions.js";
 	$title="Admin comment";
-	//$accordion = TRUE;
+	$accordion = TRUE;
 	$jquery = TRUE;
 	//$admin = "secretpage";
 	
@@ -28,15 +28,15 @@
 	try{
 		$dbconnection = myDBConnect();
 
-		// Insert, update, delete ska ske innan Select. Vi kontrollerar först insert, update och delete
-
-		// Om vi vill radera en kommentar. Använder endast det formulär så knappen finns i automatiskt
+		// Om vi vill radera en kommentar.
 		if( isset($_POST["btnDelete"]) ){
 			deleteComment( $dbconnection, $_POST["hidId"] );
 		}
 
-		// Lista kommentarer
-		listComments($dbconnection);
+		echo "<div class='accordion'>";
+			// Lista kommentarer
+			listComments($dbconnection);
+		echo "</div>";
 
 		// Stäng anslutningen till databasen
 		myDBClose($dbconnection);

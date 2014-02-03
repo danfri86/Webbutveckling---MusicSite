@@ -47,7 +47,7 @@
     }
 
     function listSongs($inDBConnection, $inSearchString) {
-    	// Hämta all info om artister
+    	// Hämta all info om låtar
     	$strSQL = "SELECT * FROM tblsong WHERE title LIKE '". $inSearchString ."%';";
     	$recordSet = myDBQuery($inDBConnection, $strSQL);
 
@@ -114,7 +114,7 @@
     }
 
     function listComments($inDBConnection, $inSongId){
-    	// Hämta all info om artister
+    	// Hämta all info om kommentarer
     	$strSQL = "SELECT * FROM tblcomment WHERE songid=". $inSongId .";";
     	$recordSet = myDBQuery($inDBConnection, $strSQL);
 
@@ -136,11 +136,4 @@
 
     	// Frigör databasen
     	myDBFreeResult($recordSet);
-    	?>
-		<?php
     }
-
-	/*
-		Om användaren inte har JavaScript aktiverat borde följande funktion anropas vid klick på spara knappen.
-		function insertComment($inDBConnection, $inSongId, $inCommentString) {}
-	*/

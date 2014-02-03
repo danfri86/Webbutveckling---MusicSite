@@ -28,9 +28,7 @@
 	try{
 		$dbconnection = myDBConnect();
 
-		// Insert, update, delete ska ske innan Select. Vi kontrollerar först insert, update och delete
-
-		// Om vi vill spara info om artist med "New/Edit Song"
+		// Om vi vill spara låt med "New/Edit Song"
 		if( isset($_POST["btnSave"]) ){
 			// Finns inte hidId så sparas en ny sång
 			if( empty($_POST["hidId"]) ){
@@ -48,7 +46,7 @@
 			}
 		}
 
-		// Om vi vill radera en sång. Använder endast det formulär så knappen finns i automatiskt
+		// Om vi vill radera en sång.
 		if( isset($_POST["btnDelete"]) ){
 			deleteSong( $dbconnection, $_POST["hidId"], $_POST["hidSoundFileName"] );
 		}

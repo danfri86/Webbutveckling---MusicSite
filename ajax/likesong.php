@@ -5,8 +5,11 @@
 	*/
 	include($_SERVER["DOCUMENT_ROOT"]. "/musicsite/src/databaseFunctions.php");
 
-	$count = $_POST['count'];
-	$latid = $_POST['latid'];
+	if( !empty($_POST["count"]) )
+		$count = $_POST['count'];
+
+	if( !empty($_POST["latid"]) )
+		$latid = $_POST['latid'];
 
 	$count++;
 
@@ -19,8 +22,6 @@
     // Stäng anslutningen till databasen
 	myDBClose($dbconnection);
 	
-	//För test returnerars konstanten 100 i form av JSON.
-	//{"gilla" : "100"}
 	echo("{\"like\" : \"". $count ."\"}");
 	
 ?>

@@ -14,7 +14,6 @@ $(document).ready(function(){
 			theEvent.preventDefault();
 			theEvent.stopPropagation();
 
-			//Visa/göm <p> som ligger i länken
 			commentsRef.slideToggle();
 		});
 	});
@@ -32,7 +31,6 @@ $(document).ready(function(){
 			theEvent.preventDefault();
 			theEvent.stopPropagation();
 
-			//Visa/göm <p> som ligger i länken
 			formRef.slideToggle();
 		});
 	});

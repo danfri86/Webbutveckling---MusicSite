@@ -1,7 +1,6 @@
 <?php
-	/* Förslag på funktioner (inklusive parametrar) som behövs för att administrera kommentarer */
     function listComments($inDBConnection){
-    	// Hämta all info om artister
+    	// Hämta all info om kommentarer
     	$strSQL = "SELECT * FROM tblcomment;";
     	$recordSet = myDBQuery($inDBConnection, $strSQL);
 
@@ -13,10 +12,10 @@
     		$text = $record["text"];
     		$insertdate = $record["insertdate"];
 
-    		// Fortsätt skriva ut resen av formuläret här med data från databasen. Använd variablerna ovan.
-    		// Se adminArtist.php hur det är uppbyggt.
-
             ?>
+
+            <h3><?php echo 'ID: '. $id ?></h3>
+
             <form action="adminComment.php" method="post" name="frmComment">
 				id: <?php echo $id ?><br />
 				songid: <?php echo $songid ?><br />
